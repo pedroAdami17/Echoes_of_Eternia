@@ -5,8 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Move Info")]
-    public float moveSpeed = 12f;
-    public float jumpForce = 12f;
+    public float moveSpeed;
+    public float jumpForce;
+    public float dashSpeed;
+    public float dashDuration;
 
     [Header("Collision Info")]
     [SerializeField] private Transform groundCheck;
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
     public PlayerAirState airState { get; private set; }
+    public PlayerDashState dashState { get; private set; }
 
     #endregion
 
@@ -43,6 +46,7 @@ public class Player : MonoBehaviour
         moveState = new PlayerMoveState(this, stateMachine, "Move");
         jumpState = new PlayerJumpState(this, stateMachine, "Jump");
         airState = new PlayerAirState(this, stateMachine, "Jump");
+        dashState = new PlayerDashState(this, stateMachine, "Dash");
     }
 
     private void Start()
