@@ -7,8 +7,13 @@ public class Player : MonoBehaviour
     [Header("Move Info")]
     public float moveSpeed;
     public float jumpForce;
+
+    [Header("Dash Info")]
+    [SerializeField] private float dashCooldown;
+    private float dashUsageTimer;
     public float dashSpeed;
     public float dashDuration;
+    public float dashDir { get; private set; }
 
     [Header("Collision Info")]
     [SerializeField] private Transform groundCheck;
@@ -17,7 +22,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float wallCheckDistance;
     [SerializeField] private LayerMask groundMask;
 
-    public int facingDir { get; private set; }
+    public int facingDir { get; private set; } = 1;
     private bool facingRight = true;
 
     #region Components;
@@ -60,6 +65,8 @@ public class Player : MonoBehaviour
     private void Update()
     {
         stateMachine.currentState.Update();
+        
+        CheckForDashInput();
     }
 
     public void SetVelocity(float _xVelocity,  float _yVelocity)
@@ -74,6 +81,22 @@ public class Player : MonoBehaviour
     {
         Gizmos.DrawLine(groundCheck.position, new Vector3(groundCheck.position.x, groundCheck.position.y - groundCheckDistance));
         Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y));
+    }
+
+    private void CheckForDashInput()
+    {
+        dashUsageTimer -= Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashUsageTimer < 0)
+        {
+            dashUsageTimer = dashCooldown;
+            dashDir = Input.GetAxisRaw("Horizontal");
+
+            if (dashDir == 0)
+                dashDir = facingDir;
+
+            stateMachine.ChangeState(dashState);
+        }
     }
 
     public void Flip()

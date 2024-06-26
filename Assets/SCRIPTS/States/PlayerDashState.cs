@@ -28,7 +28,7 @@ public class PlayerDashState : PlayerState
 
         Debug.Log("Dash Executed");
 
-        player.SetVelocity(player.dashSpeed * player.facingDir, rb.velocity.y);
+        player.SetVelocity(player.dashSpeed * player.dashDir, rb.velocity.y);
 
         if(stateTimer < 0)
         {
