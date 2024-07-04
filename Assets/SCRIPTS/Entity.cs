@@ -20,6 +20,11 @@ public class Entity : MonoBehaviour
     [SerializeField] protected float wallCheckDistance;
     [SerializeField] protected LayerMask groundMask;
 
+    [Header("Knockback Info")]
+    [SerializeField] protected Vector2 knockbackDirection;
+    [SerializeField] protected float knockbackDuration;
+    protected bool isKnocked;
+
 
     public int facingDir { get; private set; } = 1;
     protected bool facingRight = true;
@@ -43,17 +48,37 @@ public class Entity : MonoBehaviour
     #region Velocity
     public void SetVelocity(float _xVelocity, float _yVelocity)
     {
+        if (isKnocked)
+            return;
+
         rb.velocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
     }
 
-    public void SetZeroVelocity() => rb.velocity = new Vector2(0, 0);
+    public void SetZeroVelocity()
+    {
+        if(isKnocked) 
+            return;
+
+        rb.velocity = new Vector2(0, 0);
+    }
     #endregion
 
     public virtual void Damage()
     {
-        Debug.Log(gameObject.name + " took damage");
         fx.StartCoroutine("FlashFX");
+        StartCoroutine("HitKnockback");
+    }
+
+    protected virtual IEnumerator HitKnockback()
+    {
+        isKnocked = true;
+
+        rb.velocity = new Vector2(knockbackDirection.x * -facingDir, knockbackDirection.y);
+
+        yield return new WaitForSeconds(knockbackDuration);
+
+        isKnocked = false;  
     }
 
     #region Collision
