@@ -263,7 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 132053514}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 140967192}
   - component: {fileID: 140967191}
   - component: {fileID: 140967194}
+  - component: {fileID: 140967195}
   m_Layer: 0
   m_Name: SkillManager
   m_TagString: Untagged
@@ -448,6 +449,26 @@ MonoBehaviour:
   clonePrefab: {fileID: 7837284754436140444, guid: 4e2686b975b8ba84d9f38b8c72560e67, type: 3}
   cloneDuration: 1.2
   canAttack: 1
+--- !u!114 &140967195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140967190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6fcb1b62507ed149b80634cef024ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  swordPrefab: {fileID: 5033593154046267321, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+  launchForce: {x: 30, y: 40}
+  swordGravity: 4
+  numberOfDots: 20
+  spaceBetweenDots: 0.07
+  dotPrefab: {fileID: 7186245147234560456, guid: 0f2f60d53f6116f4da8d121729008b48, type: 3}
+  dotsParent: {fileID: 1649252023}
 --- !u!1 &151125680
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,7 +478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151125681}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 299212905}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +755,7 @@ GameObject:
   - component: {fileID: 565069765}
   - component: {fileID: 565069764}
   - component: {fileID: 565069766}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Enemy_Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +807,7 @@ MonoBehaviour:
   knockbackDuration: 0.07
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   stunDuration: 1
   stunDirection: {x: 10, y: 12}
   counterImage: {fileID: 755618503}
@@ -892,7 +913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 755618505}
   - component: {fileID: 755618504}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: CounterImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -978,7 +999,7 @@ GameObject:
   - component: {fileID: 762251419}
   - component: {fileID: 762251418}
   - component: {fileID: 762251420}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1385,7 @@ GameObject:
   - component: {fileID: 1079679232}
   - component: {fileID: 1079679231}
   - component: {fileID: 1079679233}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1480,7 +1501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1143799483}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: AttackCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1602,6 +1623,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1203304570
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711797791507153468, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033593154046267321, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_Name
+      value: Sword
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
 --- !u!1 &1241299066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,7 +2631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1244056578}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,6 +2901,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1649252022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649252023}
+  m_Layer: 6
+  m_Name: AimDotParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1649252023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649252022}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1785389538}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664548096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,7 +2946,7 @@ GameObject:
   - component: {fileID: 1664548100}
   - component: {fileID: 1664548099}
   - component: {fileID: 1664548098}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4233,7 +4342,7 @@ GameObject:
   - component: {fileID: 1785389540}
   - component: {fileID: 1785389539}
   - component: {fileID: 1785389541}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4260,7 +4369,7 @@ MonoBehaviour:
   wallCheckDistance: 0.15
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   knockbackDirection: {x: 0, y: 0}
   knockbackDuration: 0
   attackMovement:
@@ -4273,6 +4382,7 @@ MonoBehaviour:
   dashCooldown: 1
   dashSpeed: 30
   dashDuration: 0.2
+  sword: {fileID: 0}
 --- !u!4 &1785389538
 Transform:
   m_ObjectHideFlags: 0
@@ -4290,6 +4400,7 @@ Transform:
   - {fileID: 299212905}
   - {fileID: 1790009092}
   - {fileID: 1143799483}
+  - {fileID: 1649252023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1785389539
@@ -4377,7 +4488,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790009092}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: WallCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4410,3 +4521,4 @@ SceneRoots:
   - {fileID: 565069762}
   - {fileID: 1052266077}
   - {fileID: 140967193}
+  - {fileID: 1203304570}

@@ -22,6 +22,7 @@ public class Player : Entity
 
 
     public SkillManager skill { get; private set; }
+    public GameObject sword;
 
     #region States
 
@@ -77,6 +78,16 @@ public class Player : Entity
         stateMachine.currentState.Update();
         
         CheckForDashInput();
+    }
+
+    public void AssignNewSword(GameObject _newSword)
+    {
+        sword = _newSword;
+    }
+
+    public void ClearTheSword()
+    {
+        Destroy(sword);
     }
 
     public IEnumerator BusyFor(float _seconds)
