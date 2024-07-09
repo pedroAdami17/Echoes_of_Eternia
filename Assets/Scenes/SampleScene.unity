@@ -447,6 +447,7 @@ MonoBehaviour:
   cooldown: 0
   clonePrefab: {fileID: 7837284754436140444, guid: 4e2686b975b8ba84d9f38b8c72560e67, type: 3}
   cloneDuration: 1.2
+  canAttack: 1
 --- !u!1 &151125680
 GameObject:
   m_ObjectHideFlags: 0
