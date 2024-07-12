@@ -279,7 +279,7 @@ Transform:
   m_GameObject: {fileID: 132053513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.576, y: -1.012, z: 0}
+  m_LocalPosition: {x: 0.576, y: -0.815, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -802,7 +802,7 @@ MonoBehaviour:
   wallCheckDistance: 0.8
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   knockbackDirection: {x: 7, y: 12}
   knockbackDuration: 0.07
   whatIsPlayer:
@@ -1674,6 +1674,10 @@ PrefabInstance:
     - target: {fileID: 5033593154046267321, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033593154046267321, guid: 147b3d7be7866ab49adef786778dc88a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4379,10 +4383,10 @@ MonoBehaviour:
   counterAttackDuration: 0.2
   moveSpeed: 8
   jumpForce: 12
+  swordReturnImpact: 5
   dashCooldown: 1
   dashSpeed: 30
   dashDuration: 0.2
-  sword: {fileID: 0}
 --- !u!4 &1785389538
 Transform:
   m_ObjectHideFlags: 0

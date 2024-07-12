@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : Entity
@@ -12,6 +13,7 @@ public class Player : Entity
     [Header("Move Info")]
     public float moveSpeed;
     public float jumpForce;
+    public float swordReturnImpact;
 
     [Header("Dash Info")]
     [SerializeField] private float dashCooldown;
@@ -22,7 +24,7 @@ public class Player : Entity
 
 
     public SkillManager skill { get; private set; }
-    public GameObject sword;
+    public GameObject sword { get; private set; }
 
     #region States
 
@@ -85,8 +87,9 @@ public class Player : Entity
         sword = _newSword;
     }
 
-    public void ClearTheSword()
+    public void CatchTheSword()
     {
+        stateMachine.ChangeState(catchSwordState);
         Destroy(sword);
     }
 
