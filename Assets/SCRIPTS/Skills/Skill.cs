@@ -58,7 +58,8 @@ public class Skill : MonoBehaviour
 
             }
         }
-
+        string transformString = $"Position: {closestEnemy.gameObject.name}, Rotation: {closestEnemy.rotation}, Scale: {closestEnemy.localScale}";
+        Debug.Log(transformString);
         return closestEnemy;
     }
 }

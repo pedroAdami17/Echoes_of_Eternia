@@ -32,8 +32,6 @@ public class PlayerPrimaryAttackState : PlayerState
         player.SetVelocity(player.attackMovement[comboCounter].x * attackDir, player.attackMovement[comboCounter].y);
 
         stateTimer = .1f;
-
-        Debug.Log(comboCounter);
     }
 
     public override void Exit()
