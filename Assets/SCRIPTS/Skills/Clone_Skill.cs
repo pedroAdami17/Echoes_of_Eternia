@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Clone_Skill : Skill
 {
-    [Header("Clone Info")]  
+    [Header("Clone info")]
     [SerializeField] private GameObject clonePrefab;
     [SerializeField] private float cloneDuration;
     [Space]
@@ -14,13 +14,21 @@ public class Clone_Skill : Skill
     [SerializeField] private bool canCreateCloneOnDashStart;
     [SerializeField] private bool canCreateCloneOnDashEnd;
     [SerializeField] private bool canCreateCloneOnCounterAttack;
+    [Header("Clone can duplicate")]
+    [SerializeField] private bool canDuplicateClone;
+    [SerializeField] private float chanceToDuplicate;
+    [Header("Crystal instead of clone")]
+    public bool crystalInseadOfClone;
 
 
     public void CreateClone(Transform _clonePosition, Vector3 _offset)
     {
-        GameObject newClone = Instantiate(clonePrefab);
+        GameObject newClone = Instantiate(clonePrefab, _clonePosition.position + _offset, Quaternion.identity);
+        Clone_Skill_Controller cloneController = newClone.GetComponent<Clone_Skill_Controller>();
 
-        newClone.GetComponent<Clone_Skill_Controller>().SetupClone(_clonePosition, cloneDuration, canAttack, _offset, FindClosestEnemy(newClone.transform));
+        // Ensure the clone checks for enemies around itself
+        Transform closestEnemy = FindClosestEnemy(newClone.transform);
+        cloneController.SetupClone(newClone.transform, cloneDuration, canAttack, _offset, closestEnemy);
     }
 
     public void CreateCloneOnDashStart()
