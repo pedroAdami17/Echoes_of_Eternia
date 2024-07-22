@@ -56,22 +56,6 @@ public class Skill : MonoBehaviour
             }
         }
 
-        if (closestEnemy != null)
-        {
-            Debug.Log($"Closest enemy: {closestEnemy.name}, Distance: {closestDistance}"); // Debugging line
-        }
-        else
-        {
-            Debug.Log("No enemies found within range."); // Debugging line
-        }
-
         return closestEnemy;
-    }
-
-    private void OnDrawGizmos()
-    {
-        // Draw a sphere gizmo at the position of the object with the detection radius
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }
