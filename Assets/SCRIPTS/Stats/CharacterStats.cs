@@ -39,12 +39,14 @@ public class CharacterStats : MonoBehaviour
     private int igniteDamage;
 
 
-    [SerializeField] private int currentHealth;
+    public int currentHealth;
+
+    public System.Action onHealthChange;
 
     protected virtual void Start()
     {
         critPower.SetDefaultValue(150);
-        currentHealth = maxHealth.GetValue();
+        currentHealth = GetMaxHPValue();
     }
 
     protected virtual void Update()
@@ -64,7 +66,7 @@ public class CharacterStats : MonoBehaviour
 
         if (igniteDamageTimer < 0 && isIgnited)
         {
-            currentHealth -= igniteDamage;
+            DecreaseHealthBy(igniteDamage);
 
             if (currentHealth < 0)
                 Die();
@@ -99,7 +101,7 @@ public class CharacterStats : MonoBehaviour
 
         int totalMagicDamage = _fireDamage + _iceDamage + _lightningDamage + intelligence.GetValue();
 
-        totalMagicDamage = ChackTargetMagicResistance(_targetStats, totalMagicDamage);
+        totalMagicDamage = CheckTargetMagicResistance(_targetStats, totalMagicDamage);
         _targetStats.TakeDamage(totalMagicDamage);
 
         if (Mathf.Max(_fireDamage, _iceDamage, _lightningDamage) <= 0)
@@ -167,7 +169,7 @@ public class CharacterStats : MonoBehaviour
 
     public virtual void TakeDamage(int _damage)
     {
-        currentHealth -= _damage;
+        DecreaseHealthBy(_damage);
 
         Debug.Log(_damage);
 
@@ -175,6 +177,14 @@ public class CharacterStats : MonoBehaviour
         {
             Die();
         }
+    }
+
+    protected virtual void DecreaseHealthBy(int _damage)
+    {
+        currentHealth -= _damage;
+
+        if (onHealthChange != null)
+            onHealthChange();
     }
 
     protected virtual void Die()
@@ -228,10 +238,15 @@ public class CharacterStats : MonoBehaviour
         return Mathf.RoundToInt(critChance);
     }
 
-    private static int ChackTargetMagicResistance(CharacterStats _targetStats, int totalMagicDamage)
+    private static int CheckTargetMagicResistance(CharacterStats _targetStats, int totalMagicDamage)
     {
         totalMagicDamage -= _targetStats.magicResistence.GetValue() + (_targetStats.intelligence.GetValue() * 3);
         totalMagicDamage = Mathf.Clamp(totalMagicDamage, 1, int.MaxValue);
         return totalMagicDamage;
+    }
+
+    public int GetMaxHPValue()
+    {
+        return maxHealth.GetValue() + vitality.GetValue() * 5;
     }
 }

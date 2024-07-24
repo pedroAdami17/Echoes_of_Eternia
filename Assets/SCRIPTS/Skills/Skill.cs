@@ -46,7 +46,6 @@ public class Skill : MonoBehaviour
             if (hit.GetComponent<Enemy>() != null)
             {
                 float distanceToEnemy = Vector2.Distance(_checkTransform.position, hit.transform.position);
-                Debug.Log($"Enemy found: {hit.transform.name}, Distance: {distanceToEnemy}"); // Debugging line
 
                 if (distanceToEnemy < closestDistance)
                 {
