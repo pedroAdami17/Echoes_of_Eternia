@@ -34,7 +34,7 @@ public class Clone_Skill : Skill
 
         // Ensure the clone checks for enemies around itself
         Transform closestEnemy = FindClosestEnemy(newClone.transform);
-        cloneController.SetupClone(newClone.transform, cloneDuration, canAttack, _offset, closestEnemy, canDuplicateClone, chanceToDuplicate);
+        cloneController.SetupClone(newClone.transform, cloneDuration, canAttack, _offset, closestEnemy, canDuplicateClone, chanceToDuplicate, player);
     }
 
     public void CreateCloneOnDashStart()

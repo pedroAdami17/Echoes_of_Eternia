@@ -83,11 +83,7 @@ public class Entity : MonoBehaviour
     }
     #endregion
 
-    public virtual void DamageEffect()
-    {
-        fx.StartCoroutine("FlashFX");
-        StartCoroutine("HitKnockback");
-    }
+    public virtual void DamageImpact() => StartCoroutine("HitKnockback");
 
     protected virtual IEnumerator HitKnockback()
     {
