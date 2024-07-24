@@ -5012,8 +5012,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 109c00705d1d0a643a16b98ef25ab172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashDuration: 0.1
+  flashDuration: 0.2
   hitMat: {fileID: 2100000, guid: ec256f9a6222aba448ae9cfd72046297, type: 2}
+  chillColor:
+  - {r: 0.50980395, g: 0.77254903, b: 0.99215686, a: 1}
+  - {r: 0.50980395, g: 0.77254903, b: 0.99215686, a: 4.5973287e+24}
+  igniteColor:
+  - {r: 1, g: 0.5921569, b: 0.5921569, a: 1}
+  - {r: 0.9843137, g: 0.85882354, b: 0.85882354, a: 1}
+  shockColor:
+  - {r: 0.98039216, g: 1, b: 0.6117647, a: 1}
+  - {r: 0.96862745, g: 0.9843137, b: 0.7294118, a: 1}
 --- !u!114 &1785389542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5048,7 +5057,7 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 100
+    baseValue: 1000
     modifiers: 
   armor:
     baseValue: 0
@@ -5060,17 +5069,19 @@ MonoBehaviour:
     baseValue: 0
     modifiers: 
   fireDamage:
-    baseValue: 0
+    baseValue: 5
     modifiers: 
   iceDamage:
-    baseValue: 0
+    baseValue: 2
     modifiers: 
   lightningDamage:
-    baseValue: 0
+    baseValue: 9
     modifiers: 
   isIgnited: 0
   isChilled: 0
   isShocked: 0
+  ailmentsDuration: 3
+  shockStrikePrefab: {fileID: 335521824013795636, guid: 6cd583051b4a5284eb834f15a8475912, type: 3}
   currentHealth: 0
 --- !u!1 &1790009091
 GameObject:
