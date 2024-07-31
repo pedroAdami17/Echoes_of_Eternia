@@ -46,7 +46,7 @@ public class CharacterStats : MonoBehaviour
     public int currentHealth;
 
     public System.Action onHealthChange;
-    protected bool isDead;
+    public bool isDead { get; private set; }
 
     protected virtual void Start()
     {
