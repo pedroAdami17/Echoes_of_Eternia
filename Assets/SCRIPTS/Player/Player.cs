@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -82,31 +83,38 @@ public class Player : Entity
 
         stateMachine.Initialize(idleState);
 
+
         defaultMoveSpeed = moveSpeed;
         defaultJumpForce = jumpForce;
         defaultDashSpeed = dashSpeed;
     }
 
+
     protected override void Update()
     {
         base.Update();
+
         stateMachine.currentState.Update();
-        
+
         CheckForDashInput();
+
 
         if (Input.GetKeyDown(KeyCode.F))
             skill.crystal.CanUseSkill();
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            Inventory.instance.UseFlask();
     }
 
     public override void SlowEntityBy(float _slowPercentage, float _slowDuration)
     {
-        moveSpeed = moveSpeed * (1 -  _slowPercentage);
+        moveSpeed = moveSpeed * (1 - _slowPercentage);
         jumpForce = jumpForce * (1 - _slowPercentage);
         dashSpeed = dashSpeed * (1 - _slowPercentage);
         anim.speed = anim.speed * (1 - _slowPercentage);
 
         Invoke("ReturnDefaultVelocity", _slowDuration);
+
     }
 
     protected override void ReturnDefaultVelocity()
@@ -132,24 +140,29 @@ public class Player : Entity
     public IEnumerator BusyFor(float _seconds)
     {
         isBusy = true;
+
         yield return new WaitForSeconds(_seconds);
         isBusy = false;
     }
 
     public void AnimationTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
-    
     private void CheckForDashInput()
     {
         if (IsWallDetected())
             return;
 
+
+
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && SkillManager.instance.dash.CanUseSkill())
         {
+
             dashDir = Input.GetAxisRaw("Horizontal");
 
             if (dashDir == 0)
                 dashDir = facingDir;
+
 
             stateMachine.ChangeState(dashState);
         }

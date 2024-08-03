@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,9 +20,9 @@ public class Stat
         return finalValue;
     }
 
-    public void SetDefaultValue(int value)
+    public void SetDefaultValue(int _value)
     {
-        baseValue = value;
+        baseValue = _value;
     }
 
     public void AddModifier(int _modifier)

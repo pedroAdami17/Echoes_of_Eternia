@@ -265,37 +265,37 @@ public class Inventory : MonoBehaviour
         return equipedItem;
     }
 
-    //public void UseFlask()
-    //{
-    //    ItemData_Equipment currentFlask = GetEquipment(EquipmentType.Flask);
+    public void UseFlask()
+    {
+        ItemData_Equipment currentFlask = GetEquipment(EquipmentType.Flask);
 
-    //    if (currentFlask == null)
-    //        return;
+        if (currentFlask == null)
+            return;
 
-    //    bool canUseFlask = Time.time > lastTimeUsedFlask + flaskCooldown;
+        bool canUseFlask = Time.time > lastTimeUsedFlask + flaskCooldown;
 
-    //    if (canUseFlask)
-    //    {
-    //        flaskCooldown = currentFlask.itemCooldown;
-    //        currentFlask.Effect(null);
-    //        lastTimeUsedFlask = Time.time;
-    //    }
-    //    else
-    //        Debug.Log("Flask on cooldown;");
-    //}
+        if (canUseFlask)
+        {
+            flaskCooldown = currentFlask.itemCooldown;
+            currentFlask.Effect(null);
+            lastTimeUsedFlask = Time.time;
+        }
+        else
+            Debug.Log("Flask on cooldown;");
+    }
 
-    //public bool CanUseArmor()
-    //{
-    //    ItemData_Equipment currentArmor = GetEquipment(EquipmentType.Armor);
+    public bool CanUseArmor()
+    {
+        ItemData_Equipment currentArmor = GetEquipment(EquipmentType.Armor);
 
-    //    if (Time.time > lastTimeUsedArmor + armorCooldown)
-    //    {
-    //        armorCooldown = currentArmor.itemCooldown;
-    //        lastTimeUsedArmor = Time.time;
-    //        return true;
-    //    }
+        if (Time.time > lastTimeUsedArmor + armorCooldown)
+        {
+            armorCooldown = currentArmor.itemCooldown;
+            lastTimeUsedArmor = Time.time;
+            return true;
+        }
 
-    //    Debug.Log("Armor on cooldown");
-    //    return false;
-    //}
+        Debug.Log("Armor on cooldown");
+        return false;
+    }
 }

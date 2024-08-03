@@ -73,7 +73,7 @@ public class Crystal_Skill_Controller : MonoBehaviour
         foreach (var hit in colliders)
         {
             if (hit.GetComponent<Enemy>() != null)
-                player.stats.DoMagicDamage(hit.GetComponent<CharacterStats>());
+                player.stats.DoMagicalDamage(hit.GetComponent<CharacterStats>());
         }
     }
 

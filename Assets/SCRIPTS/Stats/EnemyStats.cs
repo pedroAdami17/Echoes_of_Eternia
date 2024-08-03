@@ -30,16 +30,16 @@ public class EnemyStats : CharacterStats
 
         Modify(damage);
         Modify(critChance);
-        Modify(critDamage);
+        Modify(critPower);
 
         Modify(maxHealth);
         Modify(armor);
         Modify(evasion);
-        Modify(magicResistence);
+        Modify(magicResistance);
 
         Modify(fireDamage);
         Modify(iceDamage);
-        Modify(lightningDamage);
+        Modify(lightingDamage);
     }
 
     private void Modify(Stat _stat)
