@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class Sword_Skill_Controller : MonoBehaviour
@@ -61,7 +59,7 @@ public class Sword_Skill_Controller : MonoBehaviour
         rb.gravityScale = _gravityScale;
 
 
-        if(pierceAmount <= 0)
+        if (pierceAmount <= 0)
             anim.SetBool("Rotation", true);
 
         spinDirection = Mathf.Clamp(rb.velocity.x, -1, 1);
@@ -79,7 +77,7 @@ public class Sword_Skill_Controller : MonoBehaviour
     }
 
     public void SetupPierce(int _pierceAmount)
-    { 
+    {
         pierceAmount = _pierceAmount;
     }
 
@@ -190,7 +188,7 @@ public class Sword_Skill_Controller : MonoBehaviour
         if (isReturning)
             return;
 
-        if(collision.GetComponent<Enemy>() != null)
+        if (collision.GetComponent<Enemy>() != null)
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             SwordSkillDamage(enemy);
@@ -205,6 +203,11 @@ public class Sword_Skill_Controller : MonoBehaviour
     {
         player.stats.DoDamage(enemy.GetComponent<CharacterStats>());
         enemy.StartCoroutine("FreezeTimeFor", freezeTimeDuration);
+
+        ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+
+        if (equipedAmulet != null)
+            equipedAmulet.Effect(enemy.transform);
     }
 
     private void SetupTargetsForBounce(Collider2D collision)
@@ -236,7 +239,7 @@ public class Sword_Skill_Controller : MonoBehaviour
         {
             StopWhenSpinning();
             return;
-        }    
+        }
 
         canRotate = false;
         cd.enabled = false;
@@ -244,7 +247,7 @@ public class Sword_Skill_Controller : MonoBehaviour
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
 
-        if (isBouncing && enemyTarget.Count > 0) 
+        if (isBouncing && enemyTarget.Count > 0)
             return;
 
         anim.SetBool("Rotation", false);

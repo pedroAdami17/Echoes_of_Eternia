@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Crystal_Skill_Controller : MonoBehaviour
@@ -6,19 +8,18 @@ public class Crystal_Skill_Controller : MonoBehaviour
     private CircleCollider2D cd => GetComponent<CircleCollider2D>();
     private Player player;
 
-
     private float crystalExistTimer;
+
 
     private bool canExplode;
     private bool canMove;
     private float moveSpeed;
 
     private bool canGrow;
-    [SerializeField] private float growSpeed = 4;
+    private float growSpeed = 5;
 
     private Transform closestTarget;
     [SerializeField] private LayerMask whatIsEnemy;
-
     public void SetupCrystal(float _crystalDuration, bool _canExplode, bool _canMove, float _moveSpeed, Transform _closestTarget, Player _player)
     {
         player = _player;
@@ -33,18 +34,21 @@ public class Crystal_Skill_Controller : MonoBehaviour
     {
         float radius = SkillManager.instance.blackhole.GetBlackHoleRadius();
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, radius, whatIsEnemy);
 
-        if(colliders.Length > 0 )
+        if (colliders.Length > 0)
             closestTarget = colliders[Random.Range(0, colliders.Length)].transform;
     }
+
 
     private void Update()
     {
         crystalExistTimer -= Time.deltaTime;
+
         if (crystalExistTimer < 0)
         {
             FinishCrystal();
+
         }
 
         if (canMove)
@@ -55,11 +59,10 @@ public class Crystal_Skill_Controller : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, closestTarget.position, moveSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, closestTarget.position) < 1)
-            {               
+            {
                 FinishCrystal();
                 canMove = false;
             }
-                
         }
 
         if (canGrow)
@@ -73,7 +76,15 @@ public class Crystal_Skill_Controller : MonoBehaviour
         foreach (var hit in colliders)
         {
             if (hit.GetComponent<Enemy>() != null)
+            {
                 player.stats.DoMagicalDamage(hit.GetComponent<CharacterStats>());
+
+
+                ItemData_Equipment equipedAmulet = Inventory.instance.GetEquipment(EquipmentType.Amulet);
+
+                if (equipedAmulet != null)
+                    equipedAmulet.Effect(hit.transform);
+            }
         }
     }
 
@@ -88,8 +99,5 @@ public class Crystal_Skill_Controller : MonoBehaviour
             SelfDestroy();
     }
 
-    public void SelfDestroy()
-    {
-        Destroy(gameObject);
-    }
+    public void SelfDestroy() => Destroy(gameObject);
 }
