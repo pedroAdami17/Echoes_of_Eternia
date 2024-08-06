@@ -1255,6 +1255,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f3243c1bd147ee54bb5996d02c44870d, type: 2}
   - {fileID: 11400000, guid: 37214be5d3c903541bd2f50fb8f2fb89, type: 2}
   - {fileID: 11400000, guid: 6dc73dbe33fdf5649915e70435ea5b12, type: 2}
+  - {fileID: 11400000, guid: ba21f1c07060e46468f71980df90ba22, type: 2}
+  - {fileID: 11400000, guid: 964ad3404b72d4f4ca90f35270f77a41, type: 2}
   equipment: []
   inventory: []
   stash: []
@@ -2462,7 +2464,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1902363943
+  m_SortingLayerID: -150566829
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -3318188226485093758, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
@@ -3112,7 +3114,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 1902363943
+  m_SortingLayerID: -150566829
   m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &863488223 stripped
@@ -9179,10 +9181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96edee493a9e78048aded5022b23dfa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agility:
+  strength:
     baseValue: 0
     modifiers: 
-  strength:
+  agility:
     baseValue: 0
     modifiers: 
   intelligence:
@@ -9197,7 +9199,7 @@ MonoBehaviour:
   critChance:
     baseValue: 0
     modifiers: 
-  critDamage:
+  critPower:
     baseValue: 0
     modifiers: 
   maxHealth:
@@ -9209,7 +9211,7 @@ MonoBehaviour:
   evasion:
     baseValue: 0
     modifiers: 
-  magicResistence:
+  magicResistance:
     baseValue: 0
     modifiers: 
   fireDamage:
@@ -9218,8 +9220,8 @@ MonoBehaviour:
   iceDamage:
     baseValue: 2
     modifiers: 
-  lightningDamage:
-    baseValue: 9
+  lightingDamage:
+    baseValue: 0
     modifiers: 
   isIgnited: 0
   isChilled: 0
@@ -9985,10 +9987,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49c238a13e96964aa0facdf8c0696b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agility:
+  strength:
     baseValue: 0
     modifiers: 
-  strength:
+  agility:
     baseValue: 0
     modifiers: 
   intelligence:
@@ -10003,11 +10005,11 @@ MonoBehaviour:
   critChance:
     baseValue: 0
     modifiers: 
-  critDamage:
+  critPower:
     baseValue: 0
     modifiers: 
   maxHealth:
-    baseValue: 20
+    baseValue: 10000
     modifiers: 
   armor:
     baseValue: 0
@@ -10015,7 +10017,7 @@ MonoBehaviour:
   evasion:
     baseValue: 0
     modifiers: 
-  magicResistence:
+  magicResistance:
     baseValue: 0
     modifiers: 
   fireDamage:
@@ -10024,7 +10026,7 @@ MonoBehaviour:
   iceDamage:
     baseValue: 5
     modifiers: 
-  lightningDamage:
+  lightingDamage:
     baseValue: 0
     modifiers: 
   isIgnited: 0
@@ -11080,7 +11082,7 @@ Transform:
   m_GameObject: {fileID: 4858638353696924194}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.34, y: -0.56757987, z: 0}
+  m_LocalPosition: {x: -9.98, y: -0.56757987, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
