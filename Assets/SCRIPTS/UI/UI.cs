@@ -5,16 +5,13 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject characterUI;
+
+    public UI_ItemTooltip itemToolTip;
+        
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        itemToolTip = GetComponentInChildren<UI_ItemTooltip>();
     }
 
     public void SwitchTo(GameObject _menu)
