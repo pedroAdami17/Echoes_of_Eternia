@@ -17,11 +17,14 @@ MonoBehaviour:
   icon: {fileID: 1025091068, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   dropChance: 24.6
   equipmentType: 0
+  itemCooldown: 0
+  itemEffects: []
+  itemDescription: Weak sword made for begginers.
   strengh: 0
-  agility: 0
-  intelligence: 0
+  agility: 3
+  intelligence: 1
   vitality: 0
-  damage: 0
+  damage: 5
   critDamage: 0
   critChance: 0
   health: 0
@@ -31,4 +34,6 @@ MonoBehaviour:
   fireDamage: 0
   iceDamage: 0
   lightningDamage: 0
-  craftingMaterials: []
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: 37214be5d3c903541bd2f50fb8f2fb89, type: 2}
+    stackSize: 2

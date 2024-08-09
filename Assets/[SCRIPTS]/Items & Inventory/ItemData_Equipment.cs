@@ -18,6 +18,8 @@ public class ItemData_Equipment : ItemData
     public float itemCooldown;
     public ItemEffect[] itemEffects;
 
+    public string itemDescription;
+
     [Header("Major Stats")]
     public int strengh;
     public int agility;
@@ -93,6 +95,49 @@ public class ItemData_Equipment : ItemData
         playerStats.fireDamage.RemoveModifier(fireDamage);
         playerStats.iceDamage.RemoveModifier(iceDamage);
         playerStats.lightingDamage.RemoveModifier(lightningDamage);
+    }
+
+    public override string GetDescription()
+    {
+        sb.Length = 0;
+
+        if (!string.IsNullOrEmpty(itemDescription))
+        {
+            sb.AppendLine(itemDescription);
+            //sb.AppendLine(); // Add a line break after the description
+        }
+
+        AddItemDescription(strengh, "Strengh");
+        AddItemDescription(agility, "Agility");
+        AddItemDescription(intelligence, "Intelligence");
+        AddItemDescription(vitality, "Vitality");
+
+        AddItemDescription(damage, "Damage");
+        AddItemDescription(critDamage, "Crit Damage");
+        AddItemDescription(critChance, "Crit Chance");
+
+        AddItemDescription(health, "Health");
+        AddItemDescription(armor, "Armor");
+        AddItemDescription(evasion, "Evasion");
+        AddItemDescription(magicResistance, "Magic Res");
+
+        AddItemDescription(fireDamage, "Fire Damage");
+        AddItemDescription(iceDamage, "Ice Damage");
+        AddItemDescription(lightningDamage, "Lightning Damage");
+
+        return sb.ToString();
+    }
+
+    private void AddItemDescription(int _value, string _name)
+    {
+        if(_value != 0)
+        {
+            if (sb.Length > 0)
+                sb.AppendLine();
+
+            if(_value > 0)
+                sb.Append("+ " + _value + " " + _name);
+        }
     }
 
 }

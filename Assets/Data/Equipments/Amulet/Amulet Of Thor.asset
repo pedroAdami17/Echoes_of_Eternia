@@ -15,11 +15,12 @@ MonoBehaviour:
   itemType: 1
   itemName: Amulet Of Thor
   icon: {fileID: -245851270, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
-  dropChance: 1.4
+  dropChance: 2.6
   equipmentType: 2
   itemCooldown: 0
   itemEffects:
   - {fileID: 11400000, guid: d66f8592c8939c64e9086837ed2195b3, type: 2}
+  itemDescription: 
   strengh: 0
   agility: 0
   intelligence: 0
@@ -34,4 +35,10 @@ MonoBehaviour:
   fireDamage: 0
   iceDamage: 0
   lightningDamage: 10
-  craftingMaterials: []
+  craftingMaterials:
+  - data: {fileID: 11400000, guid: 37214be5d3c903541bd2f50fb8f2fb89, type: 2}
+    stackSize: 2
+  - data: {fileID: 11400000, guid: ce0e12ce5697e0149ae456284be32313, type: 2}
+    stackSize: 1
+  - data: {fileID: 11400000, guid: 6dc73dbe33fdf5649915e70435ea5b12, type: 2}
+    stackSize: 3

@@ -10,31 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 386cecffc2befe945bff4dcd29be0acf, type: 3}
-  m_Name: Fire Flask
+  m_Name: Wild Necklace
   m_EditorClassIdentifier: 
-  itemType: 1
-  itemName: Fire Flask
-  icon: {fileID: -980464371, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  itemType: 0
+  itemName: 
+  icon: {fileID: -1342722037, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   dropChance: 0
-  equipmentType: 0
-  itemCooldown: 5
-  itemEffects:
-  - {fileID: 11400000, guid: a7b82fc3aaea41946a19974ef55957b0, type: 2}
+  equipmentType: 2
+  itemCooldown: 0
+  itemEffects: []
   itemDescription: 
-  strengh: 0
-  agility: 0
+  strengh: 11
+  agility: 9
   intelligence: 0
-  vitality: 0
-  damage: 0
-  critDamage: 0
-  critChance: 0
+  vitality: 2
+  damage: 5
+  critDamage: 6
+  critChance: 3
   health: 0
   armor: 0
-  evasion: 0
+  evasion: 2
   magicResistance: 0
   fireDamage: 0
   iceDamage: 0
   lightningDamage: 0
   craftingMaterials:
-  - data: {fileID: 11400000, guid: ce0e12ce5697e0149ae456284be32313, type: 2}
-    stackSize: 2
+  - data: {fileID: 11400000, guid: ba21f1c07060e46468f71980df90ba22, type: 2}
+    stackSize: 1

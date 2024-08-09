@@ -124,12 +124,12 @@ public class Inventory : MonoBehaviour
 
         for (int i = 0; i < inventoryItemSlot.Length; i++)
         {
-            inventoryItemSlot[i].CleanSlot();
+            inventoryItemSlot[i].CleanUpSlot();
         }
 
         for (int i = 0; i < stashItemSlot.Length; i++)
         {
-            stashItemSlot[i].CleanSlot();
+            stashItemSlot[i].CleanUpSlot();
         }
 
 
