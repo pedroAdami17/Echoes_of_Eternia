@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
@@ -34,7 +35,7 @@ public class Inventory : MonoBehaviour
     private float lastTimeUsedFlask;
     private float lastTimeUsedArmor;
 
-    private float flaskCooldown;
+    public float flaskCooldown { get; private set; }
     private float armorCooldown;
 
     private void Awake()
@@ -68,7 +69,8 @@ public class Inventory : MonoBehaviour
     {
         for (int i = 0; i < startingItems.Count; i++)
         {
-            AddItem(startingItems[i]);
+            if (startingItems[i] != null)
+                AddItem(startingItems[i]);
         }
     }
 
@@ -143,7 +145,12 @@ public class Inventory : MonoBehaviour
             stashItemSlot[i].UpdateSlot(stash[i]);
         }
 
-        for (int i = 0; i < statSlot.Length; i++)
+        UpdateStatsUI();
+    }
+
+    public void UpdateStatsUI()
+    {
+        for (int i = 0; i < statSlot.Length; i++) // update info of stats in character UI
         {
             statSlot[i].UpdateStatValueUI();
         }
@@ -219,7 +226,7 @@ public class Inventory : MonoBehaviour
 
     public bool CanAddItem()
     {
-        if(inventory.Count >= inventoryItemSlot.Length)
+        if (inventory.Count >= inventoryItemSlot.Length)
         {
             return false;
         }
