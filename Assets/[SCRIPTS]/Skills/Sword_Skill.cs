@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 
@@ -16,26 +15,37 @@ public class Sword_Skill : Skill
     public SwordType swordType = SwordType.Regular;
 
     [Header("Bounce Info")]
+    [SerializeField] private UI_SkillTreeSlots bounceUnlockButton;
     [SerializeField] private int bounceAmount;
     [SerializeField] private float bounceGravity;
     [SerializeField] private float bounceSpeed;
 
     [Header("Pierce Info")]
+    [SerializeField] private UI_SkillTreeSlots pierceUnlockButton;
     [SerializeField] private int pierceAmount;
     [SerializeField] private float pirceGravity;
 
     [Header("Spin Info")]
+    [SerializeField] private UI_SkillTreeSlots spinUnlockButton;
     [SerializeField] private float hitCooldown = .35f;
     [SerializeField] private float maxTravelDistance = 7;
     [SerializeField] private float spinDuration = 2;
     [SerializeField] private float spinGravity = 1;
 
     [Header("Skill Info")]
+    [SerializeField] private UI_SkillTreeSlots swordUnlockButton;
+    public bool swordUnlocked { get; private set; }
     [SerializeField] private GameObject swordPrefab;
     [SerializeField] private Vector2 launchForce;
     [SerializeField] private float swordGravity;
     [SerializeField] private float freezeTimeDuration;
     [SerializeField] private float returnSpeed;
+
+    [Header("Passive Skills")]
+    [SerializeField] private UI_SkillTreeSlots timeStopUnlockButton;
+    public bool timeStopUnlocked { get; private set; }
+    [SerializeField] private UI_SkillTreeSlots vulnerableUnlockButton;
+    public bool vulnerableUnlocked { get; private set; }
 
 
     private Vector2 finalDir;
@@ -53,8 +63,15 @@ public class Sword_Skill : Skill
         base.Start();
 
         GenerateDots();
-
         SetupGravity();
+
+
+        timeStopUnlockButton.OnSkillUnlocked += TimeStopUnlock;
+        vulnerableUnlockButton.OnSkillUnlocked += VulnerableUnlock;
+        swordUnlockButton.OnSkillUnlocked += UnlockSword;
+        bounceUnlockButton.OnSkillUnlocked += UnlockBounceSword;
+        pierceUnlockButton.OnSkillUnlocked += UnlockPierceSword;
+        spinUnlockButton.OnSkillUnlocked += UnlockSpinSword;
     }
 
     private void SetupGravity()
@@ -63,7 +80,7 @@ public class Sword_Skill : Skill
             swordGravity = bounceGravity;
         else if (swordType == SwordType.Pierce)
             swordGravity = pirceGravity;
-        else if(swordType == SwordType.Spin)
+        else if (swordType == SwordType.Spin)
             swordGravity = spinGravity;
     }
 
@@ -81,6 +98,49 @@ public class Sword_Skill : Skill
             }
         }
     }
+
+    #region Unlock skills
+
+    private void TimeStopUnlock()
+    {
+        if (timeStopUnlockButton.unlocked)
+            timeStopUnlocked = true;
+    }
+
+    private void VulnerableUnlock()
+    {
+        if (vulnerableUnlockButton.unlocked)
+            vulnerableUnlocked = true;
+    }
+
+    private void UnlockSword()
+    {
+        if (swordUnlockButton.unlocked)
+        {
+            swordType = SwordType.Regular;
+            swordUnlocked = true;
+        }
+    }
+
+    private void UnlockBounceSword()
+    {
+        if (bounceUnlockButton.unlocked)
+            swordType = SwordType.Bounce;
+    }
+
+    private void UnlockPierceSword()
+    {
+        if (pierceUnlockButton.unlocked)
+            swordType = SwordType.Pierce;
+    }
+
+    private void UnlockSpinSword()
+    {
+        if (spinUnlockButton.unlocked)
+            swordType = SwordType.Spin;
+    }
+
+    #endregion
 
     public void CreateSword()
     {
