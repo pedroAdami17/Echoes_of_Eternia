@@ -22,7 +22,7 @@ public PlayerGroundedState(Player _player, PlayerStateMachine _stateMachine, str
     {
         base.Update();
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && player.skill.blackhole.blackHoleUnlocked)
             stateMachine.ChangeState(player.blackholeState);
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && HasNoSword() && player.skill.sword.swordUnlocked)
