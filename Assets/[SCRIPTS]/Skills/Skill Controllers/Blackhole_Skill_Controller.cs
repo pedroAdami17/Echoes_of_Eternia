@@ -200,3 +200,4 @@ public class Blackhole_Skill_Controller : MonoBehaviour
 
     public void AddEnemyToList(Transform _enemyTransform) => targets.Add(_enemyTransform);
 }
+ 
