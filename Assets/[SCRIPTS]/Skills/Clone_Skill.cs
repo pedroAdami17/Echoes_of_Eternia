@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.ExceptionServices;
 using UnityEngine;
 
 public class Clone_Skill : Skill
@@ -14,7 +11,7 @@ public class Clone_Skill : Skill
 
     [SerializeField] private bool createCloneOnDashStart;
     [SerializeField] private bool createCloneOnDashOver;
-    [SerializeField] private bool canCreateCloneOnCounterAttack;
+
     [Header("Clone can duplicate")]
     [SerializeField] private bool canDuplicateClone;
     [SerializeField] private float chanceToDuplicate;
@@ -37,25 +34,14 @@ public class Clone_Skill : Skill
         cloneController.SetupClone(newClone.transform, cloneDuration, canAttack, _offset, closestEnemy, canDuplicateClone, chanceToDuplicate, player);
     }
 
-    public void CreateCloneOnDashStart()
+
+
+    public void CreateCloneWithDelay(Transform _enemyTransform)
     {
-        if (createCloneOnDashStart)
-            CreateClone(player.transform, Vector3.zero);
+        StartCoroutine(CloneDelayCorotine(_enemyTransform, new Vector3(.7f * player.facingDir, 0)));
     }
 
-    public void CreateCloneOnDashEnd()
-    {
-        if (createCloneOnDashOver)
-            CreateClone(player.transform, Vector3.zero);
-    }
-
-    public void CreateCloneOnCounterAttack(Transform _enemyTransform)
-    {
-        if (canCreateCloneOnCounterAttack)
-            StartCoroutine(CreateCloneWithDelay(_enemyTransform, new Vector3(.7f * player.facingDir, 0)));
-    }
-
-    private IEnumerator CreateCloneWithDelay(Transform _transform, Vector3 _offset)
+    private IEnumerator CloneDelayCorotine(Transform _transform, Vector3 _offset)
     {
         yield return new WaitForSeconds(.4f);
         CreateClone(_transform, _offset);
