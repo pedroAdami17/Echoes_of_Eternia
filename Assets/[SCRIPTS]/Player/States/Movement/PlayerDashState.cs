@@ -20,8 +20,8 @@ public class PlayerDashState : PlayerState
     public override void Exit()
     {
         base.Exit();
-
-        player.skill.dash.CloneOnDash();
+         
+        player.skill.dash.CloneOnArrival();
         player.SetVelocity(0, rb.velocity.y);
     }
 

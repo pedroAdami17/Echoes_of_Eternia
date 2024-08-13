@@ -2156,7 +2156,6 @@ MonoBehaviour:
   cooldown: 1
   detectionRadius: 25
   dashUnlockButton: {fileID: 716575654}
-  dashUnlocked: 0
   cloneOnDashUnlockButton: {fileID: 1376497801}
   cloneOnArrivalUnlockButton: {fileID: 983762024}
 --- !u!114 &140967192
@@ -2203,9 +2202,9 @@ MonoBehaviour:
   clonePrefab: {fileID: 7837284754436140444, guid: 4e2686b975b8ba84d9f38b8c72560e67, type: 3}
   cloneDuration: 1.2
   canAttack: 1
-  createCloneOnDashStart: 1
-  createCloneOnDashOver: 1
-  canDuplicateClone: 1
+  createCloneOnDashStart: 0
+  createCloneOnDashOver: 0
+  canDuplicateClone: 0
   chanceToDuplicate: 50
   crystalInsteadOfClone: 0
 --- !u!114 &140967195
@@ -2278,11 +2277,16 @@ MonoBehaviour:
   detectionRadius: 25
   crystalDuration: 1.5
   crystalPrefab: {fileID: 2268118220817026213, guid: 02ea42b5bf14cd84e88e2df900df9f8d, type: 3}
+  unlockCloneInsteadButton: {fileID: 255308940}
   cloneInsteadOfCrystal: 0
-  canExplode: 1
-  canMoveToEnemy: 1
+  unlockCrytalButton: {fileID: 158798515}
+  unlockExplosiveCrystalButton: {fileID: 828678714}
+  canExplode: 0
+  unlockMovingCrystalButton: {fileID: 1046793070}
+  canMoveToEnemy: 0
   moveSpeed: 7
-  canUseMultiStacks: 1
+  unlockMultiStackButton: {fileID: 727033807}
+  canUseMultiStacks: 0
   amountOfStacks: 3
   multiStackCooldown: 3
   useTimeWindow: 4
@@ -8452,10 +8456,10 @@ RectTransform:
   - {fileID: 873860948}
   m_Father: {fileID: 1859873786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 725, y: -50}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661005381
 MonoBehaviour:
@@ -9546,7 +9550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 84724980, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
+  m_Sprite: {fileID: 848973749, guid: a9ca9a41598dd2e44b125928045c518f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14487,10 +14491,10 @@ RectTransform:
   - {fileID: 709883453}
   m_Father: {fileID: 1859873786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1425, y: -50}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041608414
 MonoBehaviour:
@@ -20630,7 +20634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1467795440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21705,10 +21709,10 @@ RectTransform:
   - {fileID: 283796153}
   m_Father: {fileID: 1859873786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1075, y: -50}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1631452000
 MonoBehaviour:
@@ -24928,10 +24932,10 @@ RectTransform:
   - {fileID: 1692040630}
   m_Father: {fileID: 1859873786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 375, y: -50}
-  m_SizeDelta: {x: 300, y: 80}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781767549
 MonoBehaviour:

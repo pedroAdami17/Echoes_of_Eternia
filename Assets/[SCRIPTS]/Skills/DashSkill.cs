@@ -1,17 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DashSkill : Skill
 {
     [Header("Dash")]
     [SerializeField] private UI_SkillTreeSlots dashUnlockButton;
-    public bool dashUnlocked;  //{ get; private set; }
+    public bool dashUnlocked { get; private set; }
 
     [Header("Clone on dash")]
     [SerializeField] private UI_SkillTreeSlots cloneOnDashUnlockButton;
-    public bool cloneOnDashUnlocked; //{ get; private set; }
+    public bool cloneOnDashUnlocked { get; private set; }
 
     [Header("Clone on arrival")]
     [SerializeField] private UI_SkillTreeSlots cloneOnArrivalUnlockButton;
