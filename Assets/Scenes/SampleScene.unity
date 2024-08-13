@@ -2134,6 +2134,7 @@ GameObject:
   - component: {fileID: 140967196}
   - component: {fileID: 140967197}
   - component: {fileID: 140967198}
+  - component: {fileID: 140967199}
   m_Layer: 0
   m_Name: SkillManager
   m_TagString: Untagged
@@ -2221,7 +2222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 0
   detectionRadius: 25
-  swordType: 1
+  swordType: 0
   bounceAmount: 4
   bounceGravity: 5
   bounceSpeed: 20
@@ -2315,6 +2316,25 @@ MonoBehaviour:
   restoreHealthPercentage: 0.016
   parryWithMirageButton: {fileID: 983312233}
   parryWithMirageUnlocked: 0
+--- !u!114 &140967199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140967190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710a82864946fbe41bba41735d910ea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  detectionRadius: 25
+  unlockDodgeButton: {fileID: 156893552}
+  evasionAmount: 10
+  dodgeUnlocked: 0
+  unlockMirageButton: {fileID: 498798360}
+  dodgeMirageUnlocked: 0
 --- !u!1 &152607038
 GameObject:
   m_ObjectHideFlags: 0
