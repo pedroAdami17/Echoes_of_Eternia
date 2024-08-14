@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20e6854d53e89bc4bbf5b49293fe16fc, type: 3}
   m_Name: Buff Strength
   m_EditorClassIdentifier: 
+  effectDescription: Increase strength for 10 seconds
   buffType: 0
   buffAmount: 10
   buffDuration: 10
