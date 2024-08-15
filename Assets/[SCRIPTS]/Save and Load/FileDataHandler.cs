@@ -8,7 +8,7 @@ public class FileDataHandler
     private string dataFileName = "";
 
     private bool encryptData = false;
-    private string codeWord = "pedrodev";
+    private string codeWord = "alexdev";
 
 
     public FileDataHandler(string _dataDirPath, string _dataFileName, bool _encryptData)

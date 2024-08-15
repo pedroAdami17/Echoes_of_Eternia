@@ -16,6 +16,8 @@ public class PlayerDeathState : PlayerState
     public override void Enter()
     {
         base.Enter();
+
+        GameObject.Find("Canvas").GetComponent<UI>().fadeScreen.FadeOut(); //Switch this to a Death Screen
     }
 
     public override void Exit()

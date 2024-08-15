@@ -9,7 +9,7 @@ public class SaveManager : MonoBehaviour
     [SerializeField] private string fileName;
     [SerializeField] private bool encryptData;
     private GameData gameData;
-    private List<ISaveManager> saveManagers;
+    [SerializeField] private List<ISaveManager> saveManagers;
     private FileDataHandler dataHandler;
 
 
@@ -35,7 +35,11 @@ public class SaveManager : MonoBehaviour
         dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, encryptData);
         saveManagers = FindAllSaveManagers();
 
+        //Invoke("LoadGame", .05f);
+
         LoadGame();
+
+
     }
 
     public void NewGame()
@@ -85,7 +89,9 @@ public class SaveManager : MonoBehaviour
     public bool HasSavedData()
     {
         if (dataHandler.Load() != null)
+        {
             return true;
+        }
 
         return false;
     }
