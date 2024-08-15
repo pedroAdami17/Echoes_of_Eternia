@@ -30,6 +30,12 @@ public class DashSkill : Skill
         cloneOnArrivalUnlockButton.OnSkillUnlocked += UnlockCloneOnArrival;
     }
 
+    protected override void CheckUnlock()
+    {
+        UnlockDash();
+        UnlockCloneOnDash();
+        UnlockCloneOnArrival();
+    }
 
     public void UnlockDash()
     {
