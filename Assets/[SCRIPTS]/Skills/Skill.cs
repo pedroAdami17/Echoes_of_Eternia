@@ -3,7 +3,7 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     public float cooldown;
-    protected float cooldownTimer;
+    public float cooldownTimer;
 
     protected Player player;
     [SerializeField] private float detectionRadius = 25f; // Add this field for visualization

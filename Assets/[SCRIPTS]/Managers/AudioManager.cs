@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -35,8 +34,6 @@ public class AudioManager : MonoBehaviour
                 PlayBGM(bgmIndex);
         }
     }
-
-
 
     public void PlaySFX(int _sfxIndex, Transform _source)
     {
