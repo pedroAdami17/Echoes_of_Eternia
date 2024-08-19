@@ -12674,6 +12674,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664053386}
   m_CullTransparentMesh: 1
+--- !u!1 &673536038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673536041}
+  - component: {fileID: 673536040}
+  - component: {fileID: 673536039}
+  m_Layer: 0
+  m_Name: DeadZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &673536039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673536038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6cc0a7e2eb53dc4fae908cd75bfd889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &673536040
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673536038}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.8843575, y: -0.6843891}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 127.66253, y: 2.3687782}
+  m_EdgeRadius: 0
+--- !u!4 &673536041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673536038}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8781099, y: -17.2, z: -0.24767026}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &677892069 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2687124936827423471, guid: 117b557c7cc84b84bb5c15879096562d, type: 3}
@@ -33340,8 +33430,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  knockbackDirection: {x: 0, y: 0}
-  knockbackDuration: 0
+  knockbackPower: {x: 8, y: 6}
+  knockbackDuration: 0.25
   attackMovement:
   - {x: 2, y: 2}
   - {x: 1, y: 2}
@@ -40964,7 +41054,7 @@ Transform:
   m_GameObject: {fileID: 5448928428850776184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.087, y: -0.209, z: 0}
+  m_LocalPosition: {x: 1.25, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41122,7 +41212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCheck: {fileID: 7079570441946201641}
-  attackCheckRadius: 0.8
+  attackCheckRadius: 1.2
   groundCheck: {fileID: 5705837846865129166}
   groundCheckDistance: 1
   wallCheck: {fileID: 934289139284294530}
@@ -41130,7 +41220,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
-  knockbackDirection: {x: 7, y: 12}
+  knockbackPower: {x: 6, y: 10}
   knockbackDuration: 0.07
   whatIsPlayer:
     serializedVersion: 2
@@ -41141,8 +41231,10 @@ MonoBehaviour:
   moveSpeed: 1.7
   idleTime: 2
   battleTime: 3
-  attackDistance: 1.5
+  attackDistance: 2
   attackCooldown: 0.4
+  minAttackCooldown: 0.3
+  maxAttackCooldown: 0.55
   lastTimeAttacked: 0
 --- !u!114 &7679910807807113340
 MonoBehaviour:
@@ -41368,3 +41460,4 @@ SceneRoots:
   - {fileID: 2050560492}
   - {fileID: 221257977}
   - {fileID: 400594120}
+  - {fileID: 673536041}

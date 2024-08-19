@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Xml;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : Entity
@@ -94,6 +91,9 @@ public class Player : Entity
     {
         base.Update();
 
+        if (Time.timeScale == 0)
+            return;
+
         stateMachine.currentState.Update();
 
         CheckForDashInput();
@@ -174,5 +174,10 @@ public class Player : Entity
         base.Die();
 
         stateMachine.ChangeState(deathState);
+    }
+
+    protected override void SetupZeroKnockbackPower()
+    {
+        knockbackPower = new Vector2(0, 0);
     }
 }

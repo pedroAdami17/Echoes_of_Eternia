@@ -16,6 +16,9 @@ public class PlayerWallSlideState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
+        if (player.IsWallDetected() == false)
+            stateMachine.ChangeState(player.airState);
     }
 
     public override void Update()

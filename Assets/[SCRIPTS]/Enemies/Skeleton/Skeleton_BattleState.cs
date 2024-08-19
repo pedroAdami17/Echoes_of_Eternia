@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class Skeleton_BattleState : EnemyState
 {
@@ -20,6 +17,8 @@ public class Skeleton_BattleState : EnemyState
 
         player = PlayerManager.instance.player.transform;
 
+        if (player.GetComponent<PlayerStats>().isDead)
+            stateMachine.ChangeState(enemy.moveState);
     }
 
     public override void Exit()
@@ -31,12 +30,12 @@ public class Skeleton_BattleState : EnemyState
     {
         base.Update();
 
-        if(enemy.IsPlayerDetected())
+        if (enemy.IsPlayerDetected())
         {
             stateTimer = enemy.battleTime;
-            if(enemy.IsPlayerDetected().distance < enemy.attackDistance)
+            if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
             {
-                if(CanAttack())
+                if (CanAttack())
                     stateMachine.ChangeState(enemy.attackState);
             }
         }
@@ -48,17 +47,18 @@ public class Skeleton_BattleState : EnemyState
 
         if (player.position.x > enemy.transform.position.x)
             moveDir = 1;
-        else if(player.position.x < enemy.transform.position.x)
+        else if (player.position.x < enemy.transform.position.x)
             moveDir = -1;
 
         enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
-            
+
     }
 
     private bool CanAttack()
     {
-        if(Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
+        if (Time.time >= enemy.lastTimeAttacked + enemy.attackCooldown)
         {
+            enemy.attackCooldown = Random.Range(enemy.minAttackCooldown, enemy.maxAttackCooldown);
             enemy.lastTimeAttacked = Time.time;
             return true;
         }

@@ -70,5 +70,7 @@ public class EnemyStats : CharacterStats
 
         PlayerManager.instance.currency += moneyDropAmount.GetValue();
         myDropSystem.GenerateDrop();
+
+        Destroy(gameObject, 5f);
     }
 }
