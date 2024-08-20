@@ -15,6 +15,8 @@ public class PlayerCatchSwordState : PlayerState
 
         sword = player.sword.transform;
 
+        player.fx.PlayDustFx();
+
         if (player.transform.position.x > sword.position.x && player.facingDir == 1)
             player.Flip();
         else if (player.transform.position.x < sword.position.x && player.facingDir == -1)
