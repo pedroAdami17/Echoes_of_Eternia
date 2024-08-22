@@ -30,9 +30,13 @@ public class PlayerStats : CharacterStats
     {
         base.DecreaseHealthBy(_damage);
 
+        if (isDead)
+            return;
+
         if(_damage > GetMaxHealthValue() * .3f)
         {
             player.SetupKnockbackPower(new Vector2(7, 6));
+            player.fx.ScreenShake(player.fx.highDamageShake);
 
             AudioManager.instance.PlaySFX(32, null);
         }

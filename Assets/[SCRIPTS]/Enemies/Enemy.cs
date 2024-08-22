@@ -1,7 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CapsuleCollider2D))]
+[RequireComponent(typeof(EnemyStats))]
+[RequireComponent(typeof(EntityFx))]
+[RequireComponent(typeof(ItemDrop))]
 public class Enemy : Entity
 {
     [SerializeField] protected LayerMask whatIsPlayer;
@@ -26,6 +30,7 @@ public class Enemy : Entity
     [HideInInspector] public float lastTimeAttacked;
 
     public EnemyStateMachine stateMachine { get; private set; }
+    public EntityFx fx { get; private set; }
     public string lastAnimBoolName { get; private set; }
     protected override void Awake()
     {
@@ -33,6 +38,13 @@ public class Enemy : Entity
         stateMachine = new EnemyStateMachine();
 
         defaultMoveSpeed = moveSpeed;
+    }
+
+    protected override void Start()
+    {
+        base.Start();
+
+        fx = GetComponent<EntityFx>();
     }
 
     protected override void Update()

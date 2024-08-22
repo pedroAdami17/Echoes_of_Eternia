@@ -1,10 +1,17 @@
+using Cinemachine;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class EntityFx : MonoBehaviour
 {
-    private SpriteRenderer sr;
+    protected Player player;
+    protected SpriteRenderer sr;
 
+    [Header("Pop Up Text")]
+    [SerializeField] private GameObject popUpTextPrefab;
+
+    
 
     [Header("Flash FX")]
     [SerializeField] private float flashDuration = .2f;
@@ -25,14 +32,28 @@ public class EntityFx : MonoBehaviour
     [SerializeField] private GameObject hitFx;
     [SerializeField] private GameObject critFx;
 
-    [Space]
-    [SerializeField] private ParticleSystem dustFx;
+    
 
-    private void Start()
+    protected virtual void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
+        player = PlayerManager.instance.player;
         originalMat = sr.material;
     }
+
+    public void CreatePopUpText(string _text)
+    {
+        float randomX = Random.Range(-1, 1);
+        float randomY = Random.Range(3, 5);
+
+        Vector3 positionOffset = new Vector3(randomX, randomY, 0);
+
+        GameObject newText = Instantiate(popUpTextPrefab, transform.position, Quaternion.identity);
+
+        newText.GetComponent<TextMeshPro>().text = _text;
+    }
+
+    
 
     public void MakeTransparent(bool _transparent)
     {
@@ -149,10 +170,5 @@ public class EntityFx : MonoBehaviour
 
         Destroy(newHitFx, .5f);
     }
-
-    public void PlayDustFx()
-    {
-        if(dustFx != null)
-            dustFx.Play();
-    }
+    
 }

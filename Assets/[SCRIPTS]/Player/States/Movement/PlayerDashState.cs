@@ -7,6 +7,7 @@ public class PlayerDashState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        player.fx.PlayDustFx();
 
         player.skill.dash.CloneOnDash();
 
