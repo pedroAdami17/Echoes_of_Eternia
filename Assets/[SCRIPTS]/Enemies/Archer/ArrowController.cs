@@ -11,17 +11,25 @@ public class ArrowController : MonoBehaviour
     [SerializeField] private bool canMove;
     [SerializeField] private bool flipped;
 
+    private CharacterStats myStats;
+
     private void Update()
     {
         if (canMove)
             rb.velocity = new Vector2(xVel, rb.velocity.y);
     }
 
+    public void SetupArrow(float _speed, CharacterStats _myStats)
+    {
+        xVel = _speed;
+        myStats = _myStats;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer(targetLayerName))
         {
-            collision.GetComponent<CharacterStats>()?.TakeDamage(damage);
+            myStats.DoDamage(collision.GetComponent<CharacterStats>());
             StuckInto(collision);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))

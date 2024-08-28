@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class Enemy_Skeleton : Enemy
 {
 
@@ -42,13 +38,13 @@ public class Enemy_Skeleton : Enemy
 
     public override bool CanBeStunned()
     {
-       if(base.CanBeStunned())
+        if (base.CanBeStunned())
         {
-            stateMachine.ChangeState(stunnedState); 
+            stateMachine.ChangeState(stunnedState);
             return true;
         }
 
-       return false;
+        return false;
     }
 
     public override void Die()
