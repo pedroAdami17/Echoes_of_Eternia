@@ -21,11 +21,6 @@ public class DeathBringer_BattleState : EnemyState
         //    stateMachine.ChangeState(enemy.moveState);
     }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
-
     public override void Update()
     {
         base.Update();
@@ -33,10 +28,13 @@ public class DeathBringer_BattleState : EnemyState
         if (enemy.IsPlayerDetected())
         {
             stateTimer = enemy.battleTime;
+
             if (enemy.IsPlayerDetected().distance < enemy.attackDistance)
             {
                 if (CanAttack())
                     stateMachine.ChangeState(enemy.attackState);
+                else
+                    stateMachine.ChangeState(enemy.idleState);
             }
         }
 
@@ -45,8 +43,15 @@ public class DeathBringer_BattleState : EnemyState
         else if (player.position.x < enemy.transform.position.x)
             moveDir = -1;
 
-        enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
+        if (enemy.IsPlayerDetected() && enemy.IsPlayerDetected().distance < enemy.attackDistance - .1f)
+            return;
 
+        enemy.SetVelocity(enemy.moveSpeed * moveDir, rb.velocity.y);
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
     }
 
     private bool CanAttack()

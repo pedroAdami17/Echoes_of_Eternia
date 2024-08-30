@@ -1,4 +1,3 @@
-using Cinemachine;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -11,7 +10,7 @@ public class EntityFx : MonoBehaviour
     [Header("Pop Up Text")]
     [SerializeField] private GameObject popUpTextPrefab;
 
-    
+
 
     [Header("Flash FX")]
     [SerializeField] private float flashDuration = .2f;
@@ -34,15 +33,17 @@ public class EntityFx : MonoBehaviour
 
     private GameObject myHealthBar;
 
-    
+
 
     protected virtual void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
         player = PlayerManager.instance.player;
+
         originalMat = sr.material;
 
-        myHealthBar = GetComponentInChildren<UI_HealthBar>().gameObject;
+
+        myHealthBar = GetComponentInChildren<UI_HealthBar>(true).gameObject;
     }
 
     public void CreatePopUpText(string _text)
@@ -57,7 +58,7 @@ public class EntityFx : MonoBehaviour
         newText.GetComponent<TextMeshPro>().text = _text;
     }
 
-    
+
 
     public void MakeTransparent(bool _transparent)
     {
@@ -180,5 +181,5 @@ public class EntityFx : MonoBehaviour
 
         Destroy(newHitFx, .5f);
     }
-    
+
 }

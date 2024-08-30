@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathBringer_AttackState : EnemyState
@@ -14,6 +12,8 @@ public class DeathBringer_AttackState : EnemyState
     public override void Enter()
     {
         base.Enter();
+
+        enemy.chanceToTeleport += 5;
     }
 
     public override void Exit()
@@ -30,6 +30,12 @@ public class DeathBringer_AttackState : EnemyState
         enemy.SetZeroVelocity();
 
         if (triggerCalled)
-            stateMachine.ChangeState(enemy.teleportState);
+        {
+            if (enemy.CanTeleport())
+                stateMachine.ChangeState(enemy.teleportState);
+            else
+                stateMachine.ChangeState(enemy.battleState);
+        }
+
     }
 }

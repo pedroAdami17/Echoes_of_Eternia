@@ -3739,7 +3739,7 @@ Transform:
   m_GameObject: {fileID: 179276758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.184, y: 1.0600001, z: 0}
+  m_LocalPosition: {x: 0.184, y: 0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32223,7 +32223,7 @@ Transform:
   m_GameObject: {fileID: 1140660505}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9, y: 1.21, z: 0}
+  m_LocalPosition: {x: -2.79, y: 1.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33426,7 +33426,7 @@ Transform:
   m_GameObject: {fileID: 1213060087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.48, y: -0.22, z: 0}
+  m_LocalPosition: {x: -2.51, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61092,7 +61092,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 13.628956, y: 1.4797153}
+  m_Offset: {x: -0.9767151, y: 1.4797153}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -61103,7 +61103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 55.671593, y: 14.239559}
+  m_Size: {x: 26.46025, y: 14.239559}
   m_EdgeRadius: 0
 --- !u!4 &1673440247
 Transform:
@@ -63158,7 +63158,7 @@ MonoBehaviour:
   attackCheck: {fileID: 1143799483}
   attackCheckRadius: 0.7
   groundCheck: {fileID: 299212905}
-  groundCheckDistance: 0.15
+  groundCheckDistance: 0.22
   wallCheck: {fileID: 1790009092}
   wallCheckDistance: 0.15
   groundMask:
@@ -63172,11 +63172,11 @@ MonoBehaviour:
   - {x: 1, y: 2}
   - {x: 4, y: 1}
   counterAttackDuration: 0.2
-  moveSpeed: 8
-  jumpForce: 12
+  moveSpeed: 10
+  jumpForce: 15
   swordReturnImpact: 5
   dashCooldown: 1
-  dashSpeed: 30
+  dashSpeed: 32
   dashDuration: 0.2
 --- !u!4 &1785389538
 Transform:
@@ -65012,7 +65012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackCheck: {fileID: 1213060088}
-  attackCheckRadius: 2.83
+  attackCheckRadius: 3.63
   groundCheck: {fileID: 1429444546}
   groundCheckDistance: 1.3
   wallCheck: {fileID: 179276759}
@@ -65029,7 +65029,7 @@ MonoBehaviour:
   stunDuration: 1
   stunDirection: {x: 7, y: 9}
   counterImage: {fileID: 2109150958}
-  moveSpeed: 1.5
+  moveSpeed: 4
   idleTime: 2
   battleTime: 10
   agroDistance: 2
@@ -65038,10 +65038,17 @@ MonoBehaviour:
   minAttackCooldown: 1
   maxAttackCooldown: 2
   lastTimeAttacked: 0
+  bossFightBegun: 1
+  spellPrefab: {fileID: 2387409884640153269, guid: 0e1a4d23e45ad0c42a9cb9edf724e727, type: 3}
+  amountOfSpells: 5
+  spellCooldown: 1
+  lastTimeCast: 1
+  spellStateCooldown: 10
+  spellOffset: {x: 2, y: 2.5}
   arena: {fileID: 1673440246}
-  surroundingCheckSize: {x: 5.05, y: 6}
-  chanceToTeleport: 0
-  defaultChanceToTeleport: 0
+  surroundingCheckSize: {x: 5.05, y: 4.74}
+  chanceToTeleport: 25
+  defaultChanceToTeleport: 25
 --- !u!114 &1856413228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65201,7 +65208,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 15
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
