@@ -1,0 +1,1623 @@
+fileFormatVersion: 2
+guid: aab84f57712e56142bfd47375d693112
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: frost_guardian_free_Frame_0
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 95
+      y: 382
+      width: 79
+      height: 92
+    spriteID: d62e7c096ea3ebd44b883a4bf08395d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 95, y: 382}
+  - name: frost_guardian_free_Frame_1
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 182
+      y: 382
+      width: 79
+      height: 92
+    spriteID: ba9b4200c52804b4ebfc8616b8f4b4b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 182, y: 382}
+  - name: frost_guardian_free_Frame_2
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 382
+      width: 79
+      height: 92
+    spriteID: 19749331e520f8046aa18a0f3d994e85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 382}
+  - name: frost_guardian_free_Frame_3
+    originalName: 
+    pivot: {x: 0.50617284, y: -0.1978022}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 890
+      y: 282
+      width: 81
+      height: 91
+    spriteID: 36085cc137d231e458a72f2daea3e3ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 890, y: 282}
+  - name: frost_guardian_free_Frame_4
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 356
+      y: 382
+      width: 79
+      height: 92
+    spriteID: fb1da7fca9ad11f40bce1793d6e46744
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 356, y: 382}
+  - name: frost_guardian_free_Frame_5
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 443
+      y: 382
+      width: 79
+      height: 92
+    spriteID: 75e8addc609b4fb4ea6f302d5864098a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 443, y: 382}
+  - name: frost_guardian_free_Frame_6
+    originalName: 
+    pivot: {x: 0.47826087, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 821
+      y: 483
+      width: 69
+      height: 92
+    spriteID: 94a7fa4e8dbc1704bbc49b2cec042d03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 821, y: 483}
+  - name: frost_guardian_free_Frame_7
+    originalName: 
+    pivot: {x: 0.47826087, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 898
+      y: 483
+      width: 69
+      height: 92
+    spriteID: be7cf2e3490c9b24f93f2b3cfcd96d41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 898, y: 483}
+  - name: frost_guardian_free_Frame_8
+    originalName: 
+    pivot: {x: 0.47142857, y: -0.1978022}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 665
+      y: 483
+      width: 70
+      height: 91
+    spriteID: 2880f03aca2e50c4d9d227fe8875f59e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 665, y: 483}
+  - name: frost_guardian_free_Frame_9
+    originalName: 
+    pivot: {x: 0.46575344, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 424
+      y: 483
+      width: 73
+      height: 92
+    spriteID: eb935d334a0c1644099eb6db72965729
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 424, y: 483}
+  - name: frost_guardian_free_Frame_10
+    originalName: 
+    pivot: {x: 0.4698795, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 382
+      width: 83
+      height: 93
+    spriteID: ceee833b4dfbd594d815163209e68ae9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 382}
+  - name: frost_guardian_free_Frame_11
+    originalName: 
+    pivot: {x: 0.48387095, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 282
+      width: 93
+      height: 92
+    spriteID: febab6e49c7e0cc4d8f86e23d85b3d3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 282}
+  - name: frost_guardian_free_Frame_12
+    originalName: 
+    pivot: {x: 0.48387095, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 105
+      y: 282
+      width: 93
+      height: 92
+    spriteID: 2e6e1f4f65ec8a746bf318047e5eae15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 105, y: 282}
+  - name: frost_guardian_free_Frame_13
+    originalName: 
+    pivot: {x: 0.4698795, y: -0.1978022}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 708
+      y: 282
+      width: 83
+      height: 91
+    spriteID: 77588fd43abe57945aff4fe553afc669
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 708, y: 282}
+  - name: frost_guardian_free_Frame_14
+    originalName: 
+    pivot: {x: 0.46575344, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 505
+      y: 483
+      width: 73
+      height: 92
+    spriteID: e87b9c2685b653c4a8ce6eb7699d4c0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 505, y: 483}
+  - name: frost_guardian_free_Frame_15
+    originalName: 
+    pivot: {x: 0.47142857, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 583
+      width: 70
+      height: 93
+    spriteID: 581c67d88e482bd4e8f218dd1f72aea4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 583}
+  - name: frost_guardian_free_Frame_16
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 530
+      y: 382
+      width: 79
+      height: 92
+    spriteID: 4b96c47058c204c4a8d3280504b8f30f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 530, y: 382}
+  - name: frost_guardian_free_Frame_17
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.1978022}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 610
+      y: 282
+      width: 90
+      height: 91
+    spriteID: 2d40c541259939c4b8b17288c792809e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 610, y: 282}
+  - name: frost_guardian_free_Frame_18
+    originalName: 
+    pivot: {x: 0.47311825, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 206
+      y: 282
+      width: 93
+      height: 92
+    spriteID: 2379ed42f9b37bf46af4dc217fb3c5a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 206, y: 282}
+  - name: frost_guardian_free_Frame_19
+    originalName: 
+    pivot: {x: 0.43010753, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 307
+      y: 282
+      width: 93
+      height: 92
+    spriteID: 38a6265cfa39c3e42b3137bc989f2fa2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 307, y: 282}
+  - name: frost_guardian_free_Frame_20
+    originalName: 
+    pivot: {x: 0.41935483, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 408
+      y: 282
+      width: 93
+      height: 92
+    spriteID: ffecdbe931e7a23439f627cce97709c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 408, y: 282}
+  - name: frost_guardian_free_Frame_21
+    originalName: 
+    pivot: {x: 0.41935483, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 509
+      y: 282
+      width: 93
+      height: 92
+    spriteID: 072bcf16f2809d84293218ffab4ff41f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 509, y: 282}
+  - name: frost_guardian_free_Frame_22
+    originalName: 
+    pivot: {x: 0.6691177, y: -0.20930232}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 296
+      y: 90
+      width: 136
+      height: 86
+    spriteID: d177ed571b5a32549b08466090abc9a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 296, y: 90}
+  - name: frost_guardian_free_Frame_23
+    originalName: 
+    pivot: {x: 0.67391306, y: -0.20930232}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 90
+      width: 138
+      height: 86
+    spriteID: 3059e034451b7874a9f90480a0605f9b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 90}
+  - name: frost_guardian_free_Frame_24
+    originalName: 
+    pivot: {x: 0.67391306, y: -0.20930232}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 150
+      y: 90
+      width: 138
+      height: 86
+    spriteID: 9877870a2ccdc0b47a8c2662bc2ac070
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 150, y: 90}
+  - name: frost_guardian_free_Frame_25
+    originalName: 
+    pivot: {x: 0.6385542, y: -0.20224719}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 799
+      y: 282
+      width: 83
+      height: 89
+    spriteID: d5fd1ce2b04aa0447858cf39b61daa3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 799, y: 282}
+  - name: frost_guardian_free_Frame_26
+    originalName: 
+    pivot: {x: 0.5686274, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 965
+      y: 382
+      width: 51
+      height: 92
+    spriteID: 3aa3859c834a70543a8bc4e6ca078e35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 965, y: 382}
+  - name: frost_guardian_free_Frame_27
+    originalName: 
+    pivot: {x: 0.51785713, y: -0.19354838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 157
+      y: 583
+      width: 56
+      height: 93
+    spriteID: b80c0dcf8d215d74a9d305888c6b638c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 157, y: 583}
+  - name: frost_guardian_free_Frame_28
+    originalName: 
+    pivot: {x: 0.57746476, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 586
+      y: 483
+      width: 71
+      height: 90
+    spriteID: 0b6ec947a36b5694fb59048b9ebf5966
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 586, y: 483}
+  - name: frost_guardian_free_Frame_29
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 617
+      y: 382
+      width: 79
+      height: 92
+    spriteID: 5d474541ed424074ba05d262982f264d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 617, y: 382}
+  - name: frost_guardian_free_Frame_30
+    originalName: 
+    pivot: {x: 0.49367085, y: -0.1978022}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 878
+      y: 382
+      width: 79
+      height: 91
+    spriteID: 9f73d63a20b5eb04bb9dd2ebe3bf7212
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 878, y: 382}
+  - name: frost_guardian_free_Frame_31
+    originalName: 
+    pivot: {x: 0.4736842, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 483
+      width: 76
+      height: 92
+    spriteID: 284672391d7780b478a3511b60bda66a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 483}
+  - name: frost_guardian_free_Frame_32
+    originalName: 
+    pivot: {x: 0.42105258, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 88
+      y: 483
+      width: 76
+      height: 92
+    spriteID: 7bfc4200cf0e6be4587894e4678f8836
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 88, y: 483}
+  - name: frost_guardian_free_Frame_33
+    originalName: 
+    pivot: {x: 0.40789476, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 172
+      y: 483
+      width: 76
+      height: 92
+    spriteID: 61262a1576246aa47855ba57e6ccb212
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 172, y: 483}
+  - name: frost_guardian_free_Frame_34
+    originalName: 
+    pivot: {x: 0.42105258, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 256
+      y: 483
+      width: 76
+      height: 92
+    spriteID: 34e17821303bf944a847c2ecbc53ecf0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 256, y: 483}
+  - name: frost_guardian_free_Frame_35
+    originalName: 
+    pivot: {x: 0.4736842, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 340
+      y: 483
+      width: 76
+      height: 92
+    spriteID: 75771b206dae4014bbc81fa5eba5692c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 340, y: 483}
+  - name: frost_guardian_free_Frame_36
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 704
+      y: 382
+      width: 79
+      height: 92
+    spriteID: 075eced5ebd0821489abff7e11a0a4e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 704, y: 382}
+  - name: frost_guardian_free_Frame_37
+    originalName: 
+    pivot: {x: 0.5063291, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 791
+      y: 382
+      width: 79
+      height: 92
+    spriteID: 7eb20b7f2d538794aa98fabc53bba510
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 791, y: 382}
+  - name: frost_guardian_free_Frame_38
+    originalName: 
+    pivot: {x: 0.51428574, y: -0.1978022}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 743
+      y: 483
+      width: 70
+      height: 91
+    spriteID: c9b972701b9959845abf4441360dd2fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 743, y: 483}
+  - name: frost_guardian_free_Frame_39
+    originalName: 
+    pivot: {x: 0.52238804, y: -0.19565217}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 583
+      width: 67
+      height: 92
+    spriteID: a818b3b67e9872b44891967f7886cb6f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 583}
+  - name: frost_guardian_free_Frame_40
+    originalName: 
+    pivot: {x: 0.47826087, y: -0.20224719}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 364
+      y: 184
+      width: 69
+      height: 89
+    spriteID: 087585668b2da1b448dcf43c32bde5e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 364, y: 184}
+  - name: frost_guardian_free_Frame_41
+    originalName: 
+    pivot: {x: 0.44117647, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 254
+      y: 184
+      width: 102
+      height: 90
+    spriteID: 593e6cd72f040414185aeb6840fd11c5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 254, y: 184}
+  - name: frost_guardian_free_Frame_42
+    originalName: 
+    pivot: {x: 0.48275867, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 130
+      y: 184
+      width: 116
+      height: 90
+    spriteID: 0613ce23563b63046acb09692c9adc8f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 130, y: 184}
+  - name: frost_guardian_free_Frame_43
+    originalName: 
+    pivot: {x: 0.4745763, y: -0.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 184
+      width: 118
+      height: 90
+    spriteID: 2a18b0c1397f031458e816f6e68226fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 184}
+  - name: frost_guardian_free_Frame_44
+    originalName: 
+    pivot: {x: 0.48672563, y: -0.21794872}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 748
+      y: 4
+      width: 113
+      height: 78
+    spriteID: a542e727ee64978478cec333d7b806b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 748, y: 4}
+  - name: frost_guardian_free_Frame_45
+    originalName: 
+    pivot: {x: 0.5276074, y: -0.21794872}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 386
+      y: 4
+      width: 163
+      height: 78
+    spriteID: 591765a865b2ea74f8968dffcb7f5f1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 386, y: 4}
+  - name: frost_guardian_free_Frame_46
+    originalName: 
+    pivot: {x: 0.5027322, y: -0.21794872}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 183
+      height: 78
+    spriteID: c4edeb9ef8ffa974b8fcfa639f17a44d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: frost_guardian_free_Frame_47
+    originalName: 
+    pivot: {x: 0.5027322, y: -0.23287672}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 195
+      y: 4
+      width: 183
+      height: 73
+    spriteID: b79c7ab050a90a94d845857a89958900
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 195, y: 4}
+  - name: frost_guardian_free_Frame_48
+    originalName: 
+    pivot: {x: 0.5027322, y: -0.3090909}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 557
+      y: 4
+      width: 183
+      height: 55
+    spriteID: b83dfa375ef26924c95709df888663cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 557, y: 4}
+  - name: frost_guardian_free_Frame_49
+    originalName: 
+    pivot: {x: 0.4720497, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 441
+      y: 184
+      width: 161
+      height: 17
+    spriteID: a94a05154ebd2c54b991ab2762dd60fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 441, y: 184}
+  - name: frost_guardian_free_Frame_50
+    originalName: 
+    pivot: {x: 0.47741935, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 557
+      y: 67
+      width: 155
+      height: 14
+    spriteID: 2f4b2535f26dd5b40942b00ee1311841
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 557, y: 67}
+  - name: frost_guardian_free_Frame_51
+    originalName: 
+    pivot: {x: 0.4761905, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 869
+      y: 4
+      width: 105
+      height: 15
+    spriteID: 27f219822270b0541afa0f31ff3df3ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 869, y: 4}
+  - name: frost_guardian_free_Frame_52
+    originalName: 
+    pivot: {x: 0.4761905, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 869
+      y: 27
+      width: 105
+      height: 15
+    spriteID: 5413c0e44f9074a4eafe54297655d815
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 869, y: 27}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1902017263
+    name: frost_guardian_free
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: frost_guardian_free_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: d62e7c096ea3ebd44b883a4bf08395d1
+    - name: frost_guardian_free_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: ba9b4200c52804b4ebfc8616b8f4b4b1
+    - name: frost_guardian_free_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: 19749331e520f8046aa18a0f3d994e85
+    - name: frost_guardian_free_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 55
+        y: 18
+        width: 81
+        height: 91
+      spriteId: 36085cc137d231e458a72f2daea3e3ea
+    - name: frost_guardian_free_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: fb1da7fca9ad11f40bce1793d6e46744
+    - name: frost_guardian_free_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: 75e8addc609b4fb4ea6f302d5864098a
+    - name: frost_guardian_free_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 63
+        y: 18
+        width: 69
+        height: 92
+      spriteId: 94a7fa4e8dbc1704bbc49b2cec042d03
+    - name: frost_guardian_free_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 63
+        y: 18
+        width: 69
+        height: 92
+      spriteId: be7cf2e3490c9b24f93f2b3cfcd96d41
+    - name: frost_guardian_free_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 63
+        y: 18
+        width: 70
+        height: 91
+      spriteId: 2880f03aca2e50c4d9d227fe8875f59e
+    - name: frost_guardian_free_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 62
+        y: 18
+        width: 73
+        height: 92
+      spriteId: eb935d334a0c1644099eb6db72965729
+    - name: frost_guardian_free_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 57
+        y: 18
+        width: 83
+        height: 93
+      spriteId: ceee833b4dfbd594d815163209e68ae9
+    - name: frost_guardian_free_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 51
+        y: 18
+        width: 93
+        height: 92
+      spriteId: febab6e49c7e0cc4d8f86e23d85b3d3e
+    - name: frost_guardian_free_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 51
+        y: 18
+        width: 93
+        height: 92
+      spriteId: 2e6e1f4f65ec8a746bf318047e5eae15
+    - name: frost_guardian_free_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 57
+        y: 18
+        width: 83
+        height: 91
+      spriteId: 77588fd43abe57945aff4fe553afc669
+    - name: frost_guardian_free_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 62
+        y: 18
+        width: 73
+        height: 92
+      spriteId: e87b9c2685b653c4a8ce6eb7699d4c0c
+    - name: frost_guardian_free_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 63
+        y: 18
+        width: 70
+        height: 93
+      spriteId: 581c67d88e482bd4e8f218dd1f72aea4
+    - name: frost_guardian_free_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: 4b96c47058c204c4a8d3280504b8f30f
+    - name: frost_guardian_free_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 54
+        y: 18
+        width: 90
+        height: 91
+      spriteId: 2d40c541259939c4b8b17288c792809e
+    - name: frost_guardian_free_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 52
+        y: 18
+        width: 93
+        height: 92
+      spriteId: 2379ed42f9b37bf46af4dc217fb3c5a7
+    - name: frost_guardian_free_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 56
+        y: 18
+        width: 93
+        height: 92
+      spriteId: 38a6265cfa39c3e42b3137bc989f2fa2
+    - name: frost_guardian_free_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 57
+        y: 18
+        width: 93
+        height: 92
+      spriteId: ffecdbe931e7a23439f627cce97709c7
+    - name: frost_guardian_free_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 57
+        y: 18
+        width: 93
+        height: 92
+      spriteId: 072bcf16f2809d84293218ffab4ff41f
+    - name: frost_guardian_free_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 5
+        y: 18
+        width: 136
+        height: 86
+      spriteId: d177ed571b5a32549b08466090abc9a0
+    - name: frost_guardian_free_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 3
+        y: 18
+        width: 138
+        height: 86
+      spriteId: 3059e034451b7874a9f90480a0605f9b
+    - name: frost_guardian_free_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 3
+        y: 18
+        width: 138
+        height: 86
+      spriteId: 9877870a2ccdc0b47a8c2662bc2ac070
+    - name: frost_guardian_free_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 43
+        y: 18
+        width: 83
+        height: 89
+      spriteId: d5fd1ce2b04aa0447858cf39b61daa3b
+    - name: frost_guardian_free_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 67
+        y: 18
+        width: 51
+        height: 92
+      spriteId: 3aa3859c834a70543a8bc4e6ca078e35
+    - name: frost_guardian_free_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 67
+        y: 18
+        width: 56
+        height: 93
+      spriteId: b80c0dcf8d215d74a9d305888c6b638c
+    - name: frost_guardian_free_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 55
+        y: 18
+        width: 71
+        height: 90
+      spriteId: 0b6ec947a36b5694fb59048b9ebf5966
+    - name: frost_guardian_free_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: 5d474541ed424074ba05d262982f264d
+    - name: frost_guardian_free_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 57
+        y: 18
+        width: 79
+        height: 91
+      spriteId: 9f73d63a20b5eb04bb9dd2ebe3bf7212
+    - name: frost_guardian_free_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 60
+        y: 18
+        width: 76
+        height: 92
+      spriteId: 284672391d7780b478a3511b60bda66a
+    - name: frost_guardian_free_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 64
+        y: 18
+        width: 76
+        height: 92
+      spriteId: 7bfc4200cf0e6be4587894e4678f8836
+    - name: frost_guardian_free_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 65
+        y: 18
+        width: 76
+        height: 92
+      spriteId: 61262a1576246aa47855ba57e6ccb212
+    - name: frost_guardian_free_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 64
+        y: 18
+        width: 76
+        height: 92
+      spriteId: 34e17821303bf944a847c2ecbc53ecf0
+    - name: frost_guardian_free_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 60
+        y: 18
+        width: 76
+        height: 92
+      spriteId: 75771b206dae4014bbc81fa5eba5692c
+    - name: frost_guardian_free_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: 075eced5ebd0821489abff7e11a0a4e4
+    - name: frost_guardian_free_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 56
+        y: 18
+        width: 79
+        height: 92
+      spriteId: 7eb20b7f2d538794aa98fabc53bba510
+    - name: frost_guardian_free_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 60
+        y: 18
+        width: 70
+        height: 91
+      spriteId: c9b972701b9959845abf4441360dd2fc
+    - name: frost_guardian_free_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 61
+        y: 18
+        width: 67
+        height: 92
+      spriteId: a818b3b67e9872b44891967f7886cb6f
+    - name: frost_guardian_free_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 63
+        y: 18
+        width: 69
+        height: 89
+      spriteId: 087585668b2da1b448dcf43c32bde5e4
+    - name: frost_guardian_free_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 51
+        y: 18
+        width: 102
+        height: 90
+      spriteId: 593e6cd72f040414185aeb6840fd11c5
+    - name: frost_guardian_free_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 40
+        y: 18
+        width: 116
+        height: 90
+      spriteId: 0613ce23563b63046acb09692c9adc8f
+    - name: frost_guardian_free_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 40
+        y: 18
+        width: 118
+        height: 90
+      spriteId: 2a18b0c1397f031458e816f6e68226fa
+    - name: frost_guardian_free_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 41
+        y: 17
+        width: 113
+        height: 78
+      spriteId: a542e727ee64978478cec333d7b806b4
+    - name: frost_guardian_free_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 10
+        y: 17
+        width: 163
+        height: 78
+      spriteId: 591765a865b2ea74f8968dffcb7f5f1f
+    - name: frost_guardian_free_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 4
+        y: 17
+        width: 183
+        height: 78
+      spriteId: c4edeb9ef8ffa974b8fcfa639f17a44d
+    - name: frost_guardian_free_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 4
+        y: 17
+        width: 183
+        height: 73
+      spriteId: b79c7ab050a90a94d845857a89958900
+    - name: frost_guardian_free_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 4
+        y: 17
+        width: 183
+        height: 55
+      spriteId: b83dfa375ef26924c95709df888663cd
+    - name: frost_guardian_free_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 20
+        y: 17
+        width: 161
+        height: 17
+      spriteId: a94a05154ebd2c54b991ab2762dd60fe
+    - name: frost_guardian_free_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 22
+        y: 16
+        width: 155
+        height: 14
+      spriteId: 2f4b2535f26dd5b40942b00ee1311841
+    - name: frost_guardian_free_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 46
+        y: 15
+        width: 105
+        height: 15
+      spriteId: 27f219822270b0541afa0f31ff3df3ec
+    - name: frost_guardian_free_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 46
+        y: 15
+        width: 105
+        height: 15
+      spriteId: 5413c0e44f9074a4eafe54297655d815
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 128}
