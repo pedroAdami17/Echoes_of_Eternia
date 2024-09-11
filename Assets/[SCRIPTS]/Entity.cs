@@ -30,7 +30,7 @@ public class Entity : MonoBehaviour
     public int knockbackDir { get; private set; }
 
     public int facingDir { get; private set; } = 1;
-    protected bool facingRight = true;
+    public bool facingRight = true;
 
     public System.Action onFlipped;
 

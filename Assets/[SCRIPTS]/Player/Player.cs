@@ -24,10 +24,16 @@ public class Player : Entity
     private float defaultDashSpeed;
     public float dashDir { get; private set; }
 
+    [Header("Camera")]
+    [SerializeField] private GameObject cameraFollowGO;
+    private float fallSpeedYDampingChangeThreshold;
+
 
     public SkillManager skill { get; private set; }
     public GameObject sword { get; private set; }
     public PlayerFx fx { get; private set; }
+
+    private CameraFollowObject cameraFollowObject;
 
     #region States
 
@@ -87,6 +93,9 @@ public class Player : Entity
         defaultMoveSpeed = moveSpeed;
         defaultJumpForce = jumpForce;
         defaultDashSpeed = dashSpeed;
+
+        cameraFollowObject = cameraFollowGO.GetComponent<CameraFollowObject>();
+        fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
     }
 
 
@@ -107,6 +116,20 @@ public class Player : Entity
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
             Inventory.instance.UseFlask();
+
+        //if falling past a certain speed thereshold
+        if(rb.velocity.y < fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
+        {
+            CameraManager.instance.LerpYDamping(true);
+        }
+
+        //if standing still or moving up
+        if(rb.velocity.y >= 0 && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+        {
+            CameraManager.instance.LerpedFromPlayerFalling = false;
+
+            CameraManager.instance.LerpYDamping(false);
+        }
     }
 
     public override void SlowEntityBy(float _slowPercentage, float _slowDuration)
@@ -182,5 +205,18 @@ public class Player : Entity
     protected override void SetupZeroKnockbackPower()
     {
         knockbackPower = new Vector2(0, 0);
+    }
+
+    public override void Flip()
+    {
+        base.Flip();
+
+        if(facingRight)
+            cameraFollowObject.CallTurn();
+        else
+            cameraFollowObject.CallTurn();
+
+        //if (cameraFollowObject != null)
+        //cameraFollowObject.CallTurn();
     }
 }
