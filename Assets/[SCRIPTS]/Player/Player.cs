@@ -219,4 +219,23 @@ public class Player : Entity
         //if (cameraFollowObject != null)
         //cameraFollowObject.CallTurn();
     }
+
+
+    public float GetColliderHeight()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider is BoxCollider2D boxCollider)
+        {
+            return boxCollider.size.y;
+        }
+        else if (collider is CapsuleCollider2D capsuleCollider)
+        {
+            return capsuleCollider.size.y;
+        }
+        else
+        {
+            // Fallback for unknown collider types (could log a warning)
+            return 1.0f;
+        }
+    }
 }

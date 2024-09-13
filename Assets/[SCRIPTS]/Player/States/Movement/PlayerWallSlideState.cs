@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerWallSlideState : PlayerState
@@ -16,31 +14,47 @@ public class PlayerWallSlideState : PlayerState
     public override void Exit()
     {
         base.Exit();
-
-        if (player.IsWallDetected() == false)
-            stateMachine.ChangeState(player.airState);
     }
 
     public override void Update()
     {
         base.Update();
 
+        // Check if the player presses jump to initiate wall jump
         if (Input.GetKeyDown(KeyCode.Space))
         {
             stateMachine.ChangeState(player.wallJumpState);
             return;
         }
 
+        // Stop sliding if player moves in the opposite direction of the wall
         if (xInput != 0 && player.facingDir != xInput)
+        {
             stateMachine.ChangeState(player.idleState);
+            return; // Avoid further execution in the update loop
+        }
 
-        if(yInput < 0)
+        // Slide slower if holding down, otherwise normal slide
+        if (yInput < 0)
+        {
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
         else
+        {
             rb.velocity = new Vector2(0, rb.velocity.y * .7f);
+        }
 
+        // If the player reaches the ground, switch to idle state
         if (player.IsGroundDetected())
+        {
             stateMachine.ChangeState(player.idleState);
+            return;
+        }
 
+        // Check if the player is no longer on the wall (i.e., edge of wall reached)
+        if (!player.IsWallDetected())
+        {
+            stateMachine.ChangeState(player.airState);  // Transition to air state only once
+        }
     }
 }

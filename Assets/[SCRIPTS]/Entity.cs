@@ -19,7 +19,7 @@ public class Entity : MonoBehaviour
     [SerializeField] protected float groundCheckDistance;
     [SerializeField] protected Transform wallCheck;
     [SerializeField] protected float wallCheckDistance;
-    [SerializeField] protected LayerMask groundMask;
+    [SerializeField] public LayerMask groundMask;
 
     [Header("Knockback Info")]
     [SerializeField] protected Vector2 knockbackPower;

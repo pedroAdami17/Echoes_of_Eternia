@@ -51,6 +51,8 @@ public class CameraManager : MonoBehaviour
 
         //Set starting position of the tracked object offset
         startingTrackedObjectOffset = framingTransposer.m_TrackedObjectOffset;
+        startingTrackedObjectOffset.y += 1.0f; // Adjust this value to raise the camera
+        framingTransposer.m_TrackedObjectOffset = startingTrackedObjectOffset;
     }
 
     #region Lerp Y Damping
