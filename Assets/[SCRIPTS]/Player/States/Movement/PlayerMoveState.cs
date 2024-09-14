@@ -31,31 +31,25 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Update();
 
-        // Always flip the player based on horizontal input (xInput)
         HandlePlayerFlip();
 
-        // Check if the player is on a slope
         SlopeCheck();
 
-        // Move the player depending on whether it is on a slope or not
         if (isOnSlope)
         {
             MoveOnSlope();
         }
         else
         {
-            // Normal horizontal movement
             player.rb.velocity = new Vector2(xInput * player.moveSpeed, player.rb.velocity.y);
         }
 
-        // Transition to idle state if no input or near a wall
         if (xInput == 0 || player.IsWallDetected())
         {
             stateMachine.ChangeState(player.idleState);
         }
     }
 
-    // Handle player flipping logic based on movement direction
     private void HandlePlayerFlip()
     {
         if (xInput > 0 && !player.facingRight)
@@ -93,23 +87,21 @@ public class PlayerMoveState : PlayerGroundedState
         }
     }
 
-    // Adjust player movement along the slope while keeping the same speed
     private void MoveOnSlope()
     {
         float moveSpeed = player.moveSpeed;
         Vector2 slopeDirection = new Vector2(slopeNormal.y, -slopeNormal.x).normalized;
 
-        // Maintain horizontal speed
+        // Calculate the horizontal movement based on input and slope direction
         float targetSpeed = xInput * moveSpeed;
         Vector2 targetVelocity = slopeDirection * targetSpeed;
 
-        // Apply velocity
+        // Set the velocity, ensuring that the vertical component is adjusted properly
         player.rb.velocity = new Vector2(targetVelocity.x, player.rb.velocity.y);
 
-        // If moving up the slope, adjust the y velocity to avoid sticking
         if (slopeAngle > 0)
         {
-            player.rb.velocity = new Vector2(player.rb.velocity.x, player.rb.velocity.y + Mathf.Sin(Mathf.Deg2Rad * slopeAngle) * moveSpeed);
+            player.rb.velocity = new Vector2(player.rb.velocity.x, Mathf.Max(player.rb.velocity.y, 0));
         }
     }
 }

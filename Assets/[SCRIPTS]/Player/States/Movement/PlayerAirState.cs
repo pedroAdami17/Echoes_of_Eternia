@@ -22,11 +22,22 @@ public class PlayerAirState : PlayerState
     {
         base.Update();
 
+        if(Input.GetKeyDown(KeyCode.Space) && player.canDoubleJump)
+        {
+            player.rb.velocity = new Vector2(player.rb.velocity.x, player.jumpForce);
+            player.canDoubleJump = false;
+            player.fx.PlayDustFx();
+            //AudioManager.instance.PlaySFX(14, null); //Change for double jump sound.
+        }
+
         if (player.IsWallDetected())
             stateMachine.ChangeState(player.wallSlideState);
 
         if (player.IsGroundDetected())
+        {
             stateMachine.ChangeState(player.idleState);
+
+        }
 
         if (xInput != 0)
             player.SetVelocity(player.moveSpeed * .8f * xInput, rb.velocity.y);

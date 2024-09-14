@@ -11,10 +11,11 @@ public class Player : Entity
 
     [Header("Move Info")]
     public float moveSpeed;
-    public float jumpForce;
     public float swordReturnImpact;
     private float defaultMoveSpeed;
     private float defaultJumpForce;
+    public bool canDoubleJump;
+    public float jumpForce;
 
     [Header("Dash Info")]
     [SerializeField] private float dashCooldown;
