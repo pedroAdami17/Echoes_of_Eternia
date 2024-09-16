@@ -15,7 +15,7 @@ TagManager:
   - Enemy
   - Sword
   - Item
-  - 
+  - Decorations
   - 
   - 
   - 
@@ -64,4 +64,7 @@ TagManager:
     locked: 0
   - name: FX
     uniqueID: 1423739461
+    locked: 0
+  - name: Details
+    uniqueID: 1160197357
     locked: 0
