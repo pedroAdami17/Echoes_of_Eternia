@@ -84,9 +84,11 @@ public class Boss_DeathBringer : Enemy
 
         if (!GroundBelow() || SomethingIsAround())
         {
+            //Debug.Log("Looking for new position");
             FindPosition();
         }
     }
+
 
     private RaycastHit2D GroundBelow() => Physics2D.Raycast(transform.position, Vector2.down, 100, groundMask);
     private bool SomethingIsAround() => Physics2D.BoxCast(transform.position, surroundingCheckSize, 0, Vector2.zero, 0, groundMask);
@@ -99,6 +101,7 @@ public class Boss_DeathBringer : Enemy
         Gizmos.DrawWireCube(transform.position, surroundingCheckSize);
     }
 
+
     public bool CanTeleport()
     {
         if (Random.Range(0, 100) <= chanceToTeleport)
@@ -110,7 +113,8 @@ public class Boss_DeathBringer : Enemy
 
         return false;
     }
-    public bool CanCastSpell()
+
+    public bool CanDoSpellCast()
     {
         if (Time.time >= lastTimeCast + spellStateCooldown)
         {

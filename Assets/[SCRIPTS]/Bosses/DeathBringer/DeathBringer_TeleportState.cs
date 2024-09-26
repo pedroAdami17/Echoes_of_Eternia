@@ -20,7 +20,7 @@ public class DeathBringer_TeleportState : EnemyState
 
         if (triggerCalled)
         {
-            if (enemy.CanCastSpell())
+            if (enemy.CanDoSpellCast())
                 stateMachine.ChangeState(enemy.spellCastState);
             else
                 stateMachine.ChangeState(enemy.battleState);
