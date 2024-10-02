@@ -13,6 +13,13 @@ public class ItemDrop : MonoBehaviour
 
     public virtual void GenerateDrop()
     {
+        // Safety check: if no possible items, return without generating drops
+        if (possibleDrop == null || possibleDrop.Length == 0)
+        {
+            Debug.LogWarning("No items to drop for this enemy.");
+            return;
+        }
+
         dropList.Clear(); // Clear the list before generating new items
 
         for (int i = 0; i < possibleDrop.Length; i++)
@@ -23,9 +30,10 @@ public class ItemDrop : MonoBehaviour
             }
         }
 
+        // Ensure minimum guaranteed drops
         if (dropList.Count < guaranteedMinDrops)
         {
-            // If the dropList is too small, add random items from possibleDrop to ensure the minimum
+            // Add random items to ensure the minimum drop count
             while (dropList.Count < guaranteedMinDrops)
             {
                 ItemData randomItem = possibleDrop[Random.Range(0, possibleDrop.Length)];
@@ -33,7 +41,7 @@ public class ItemDrop : MonoBehaviour
             }
         }
 
-        // Adjust the final drop count to be within possibleItemDrop or the size of dropList
+        // Limit the drop count to possibleItemDrop or the size of dropList
         int dropCount = Mathf.Min(possibleItemDrop, dropList.Count);
 
         for (int i = 0; i < dropCount; i++)

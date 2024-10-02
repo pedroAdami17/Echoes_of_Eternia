@@ -1412,6 +1412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DarkScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 7950105657426853201, guid: 117b557c7cc84b84bb5c15879096562d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

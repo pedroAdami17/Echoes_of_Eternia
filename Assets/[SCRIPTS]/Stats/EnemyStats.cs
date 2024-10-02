@@ -10,12 +10,13 @@ public class EnemyStats : CharacterStats
 
     [Header("Level Details")]
     [SerializeField] private int level = 1;
-
     [Range(0f, 1f)]
     [SerializeField] private float percentageModifier = .4f;
 
     protected override void Start()
     {
+        base.Start();
+
         moneyDropAmount.SetDefaultValue(10);
         ApplyLevelModifiers();
 
@@ -25,8 +26,16 @@ public class EnemyStats : CharacterStats
         myDropSystem = GetComponent<ItemDrop>();
     }
 
+    public void SetLevel(int newLevel)
+    {
+        level = newLevel;
+        ApplyLevelModifiers();
+    }    
+
     private void ApplyLevelModifiers()
     {
+
+
         Modify(strength);
         Modify(agility);
         Modify(intelligence);
@@ -52,7 +61,7 @@ public class EnemyStats : CharacterStats
     {
         for(int i = 1; i < level; i++)
         {
-            float modifier = _stat.GetValue() + percentageModifier;
+            float modifier = _stat.GetValue() * (1 + percentageModifier);
 
             _stat.AddModifier(Mathf.RoundToInt(modifier));
         }
