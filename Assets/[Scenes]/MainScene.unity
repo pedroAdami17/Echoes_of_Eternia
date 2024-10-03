@@ -10688,7 +10688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &249270048
 Transform:
   m_ObjectHideFlags: 0
@@ -100778,7 +100778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1546721203
 Transform:
   m_ObjectHideFlags: 0
@@ -115858,7 +115858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1666904712
 Transform:
   m_ObjectHideFlags: 0
@@ -123455,14 +123455,14 @@ MonoBehaviour:
   flashDuration: 0.2
   hitMat: {fileID: 2100000, guid: ec256f9a6222aba448ae9cfd72046297, type: 2}
   chillColor:
-  - {r: 0.39208794, g: 0.6793467, b: 0.9339623, a: 0}
-  - {r: 0.55108577, g: 0.7390531, b: 0.9056604, a: 0}
+  - {r: 0.39208794, g: 0.6793467, b: 0.9339623, a: 1}
+  - {r: 0.55108577, g: 0.7390531, b: 0.9056604, a: 1}
   igniteColor:
-  - {r: 0.8962264, g: 0.38470095, b: 0.38470095, a: 0}
-  - {r: 0.9056604, g: 0.5254539, b: 0.5254539, a: 0}
+  - {r: 0.8962264, g: 0.38470095, b: 0.38470095, a: 1}
+  - {r: 0.9056604, g: 0.5254539, b: 0.5254539, a: 1}
   shockColor:
-  - {r: 0.8867924, g: 0.8700926, b: 0.3722855, a: 0}
-  - {r: 0.9150943, g: 0.9070544, b: 0.6517889, a: 0}
+  - {r: 0.8867924, g: 0.8700926, b: 0.3722855, a: 1}
+  - {r: 0.9150943, g: 0.9070544, b: 0.6517889, a: 1}
   igniteFx: {fileID: 249270050}
   chillFx: {fileID: 1546721205}
   shockFx: {fileID: 1666904714}
@@ -131697,6 +131697,10 @@ PrefabInstance:
     - target: {fileID: 7951576211588991676, guid: e3e2ac6fcde7af3489d7f2f5bf140bee, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8510589324436699385, guid: e3e2ac6fcde7af3489d7f2f5bf140bee, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
