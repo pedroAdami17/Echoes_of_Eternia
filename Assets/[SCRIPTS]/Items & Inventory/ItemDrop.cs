@@ -4,39 +4,38 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    [SerializeField] private int guaranteedMinDrops = 1; // Minimum guaranteed drops
-    [SerializeField] private int possibleItemDrop; // Maximum number of items to drop
-    [SerializeField] private ItemData[] possibleDrop; // Array of possible items to drop
+    [SerializeField] private int guaranteedMinDrops = 1; 
+    [SerializeField] private int possibleItemDrop = 3;
+    [SerializeField] private ItemData[] possibleDrop; 
     private List<ItemData> dropList = new List<ItemData>();
 
     [SerializeField] private GameObject dropPrefab;
 
     public virtual void GenerateDrop()
     {
-        // Safety check: if no possible items, return without generating drops
         if (possibleDrop == null || possibleDrop.Length == 0)
         {
             Debug.LogWarning("No items to drop for this enemy.");
             return;
         }
 
-        dropList.Clear(); // Clear the list before generating new items
+        dropList.Clear(); 
 
-        for (int i = 0; i < possibleDrop.Length; i++)
+        foreach (var item in possibleDrop)
         {
-            if (Random.Range(0, 100) <= possibleDrop[i].dropChance)
+            if (Random.Range(0, 100) < item.dropChance) 
             {
-                dropList.Add(possibleDrop[i]);
+                dropList.Add(item);
             }
         }
 
         // Ensure minimum guaranteed drops
-        if (dropList.Count < guaranteedMinDrops)
+        while (dropList.Count < guaranteedMinDrops)
         {
-            // Add random items to ensure the minimum drop count
-            while (dropList.Count < guaranteedMinDrops)
+            ItemData randomItem = possibleDrop[Random.Range(0, possibleDrop.Length)];
+            // Ensure no duplicates
+            if (!dropList.Contains(randomItem))
             {
-                ItemData randomItem = possibleDrop[Random.Range(0, possibleDrop.Length)];
                 dropList.Add(randomItem);
             }
         }
@@ -46,9 +45,10 @@ public class ItemDrop : MonoBehaviour
 
         for (int i = 0; i < dropCount; i++)
         {
-            ItemData randomItem = dropList[Random.Range(0, dropList.Count)];
+            int randomIndex = Random.Range(0, dropList.Count); 
+            ItemData randomItem = dropList[randomIndex];
 
-            dropList.Remove(randomItem);
+            dropList.RemoveAt(randomIndex); 
             DropItem(randomItem);
         }
     }
@@ -56,9 +56,9 @@ public class ItemDrop : MonoBehaviour
     protected void DropItem(ItemData _itemData)
     {
         GameObject newDrop = Instantiate(dropPrefab, transform.position, Quaternion.identity);
-
         Vector2 randomVelocity = new Vector2(Random.Range(-5, 5), Random.Range(15, 20));
 
         newDrop.GetComponent<ItemObject>().SetupItem(_itemData, randomVelocity);
+        Debug.Log($"Dropped item: {_itemData.name} with velocity: {randomVelocity}");
     }
 }

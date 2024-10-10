@@ -136,6 +136,7 @@ public class Blackhole_Skill_Controller : MonoBehaviour
         playerCanExitState = true;
         isShrinking = true;
         cloneAttackReleased = false;
+        AudioManager.instance.StopSFX(33);
 
         // Reset player visibility
         if (!playerCanDisapear)
