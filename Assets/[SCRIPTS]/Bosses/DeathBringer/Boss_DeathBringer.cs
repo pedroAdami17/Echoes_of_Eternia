@@ -76,22 +76,64 @@ public class Boss_DeathBringer : Enemy
 
     public void FindPosition()
     {
+        // Get a random position within the arena
         float x = Random.Range(arena.bounds.min.x + 3, arena.bounds.max.x - 3);
         float y = Random.Range(arena.bounds.min.y + 3, arena.bounds.max.y - 3);
 
-        transform.position = new Vector3(x, y);
-        transform.position = new Vector3(transform.position.x, transform.position.y - GroundBelow().distance + (cd.size.y / 2));
+        // Log the attempted position
+        Debug.Log($"Attempting teleport to: ({x}, {y})");
 
-        if (!GroundBelow() || SomethingIsAround())
+        // Adjust the boss's position based on the ground below
+        transform.position = new Vector3(x, y);
+        RaycastHit2D groundHit = GroundBelow();
+
+        if (groundHit.collider != null)
         {
-            //Debug.Log("Looking for new position");
-            FindPosition();
+            transform.position = new Vector3(transform.position.x, groundHit.point.y + (cd.size.y / 2));
+            Debug.Log($"Teleport successful to: {transform.position}");
+        }
+        else
+        {
+            Debug.Log("No ground found. Trying another position.");
+        }
+
+        // If the ground or surroundings are invalid, try again
+        if (!groundHit || SomethingIsAround())
+        {
+            int maxAttempts = 5;
+            for (int i = 0; i < maxAttempts; i++)
+            {
+                x = Random.Range(arena.bounds.min.x + 3, arena.bounds.max.x - 3);
+                y = Random.Range(arena.bounds.min.y + 3, arena.bounds.max.y - 3);
+                transform.position = new Vector3(x, y);
+                groundHit = GroundBelow();
+
+                if (groundHit.collider != null && !SomethingIsAround())
+                {
+                    transform.position = new Vector3(transform.position.x, groundHit.point.y + (cd.size.y / 2));
+                    Debug.Log($"Teleport successful on attempt {i + 1} to: {transform.position}");
+                    break; // Valid position found, exit loop
+                }
+                else
+                {
+                    Debug.Log($"Attempt {i + 1} failed.");
+                }
+            }
         }
     }
 
 
-    private RaycastHit2D GroundBelow() => Physics2D.Raycast(transform.position, Vector2.down, 100, groundMask);
-    private bool SomethingIsAround() => Physics2D.BoxCast(transform.position, surroundingCheckSize, 0, Vector2.zero, 0, groundMask);
+    private RaycastHit2D GroundBelow()
+    {
+        Physics2D.Raycast(transform.position, Vector2.down, 100, groundMask);
+        return Physics2D.Raycast(transform.position, Vector2.down, 100, groundMask);
+    }
+    private bool SomethingIsAround()
+    {
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, surroundingCheckSize, 0, Vector2.zero, 0, groundMask);
+        return hit.collider != null; 
+    }
+
 
     protected override void OnDrawGizmos()
     {

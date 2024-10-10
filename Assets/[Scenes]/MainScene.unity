@@ -120929,7 +120929,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.0544968, y: 0.25827694}
+  m_Offset: {x: -1.0544968, y: -2.7678022}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -120940,7 +120940,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.911575, y: 15.971437}
+  m_Size: {x: 28.911575, y: 11.554995}
   m_EdgeRadius: 0
 --- !u!4 &1673440247
 Transform:
@@ -123229,7 +123229,7 @@ Transform:
   m_GameObject: {fileID: 1785389536}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.96, y: -7.7, z: 0}
+  m_LocalPosition: {x: 186.4, y: 20.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -123712,7 +123712,7 @@ MonoBehaviour:
   spellStateCooldown: 10
   spellOffset: {x: 2, y: 1.5}
   arena: {fileID: 1673440246}
-  surroundingCheckSize: {x: 2.57, y: 3.26}
+  surroundingCheckSize: {x: 2.37, y: 3.26}
   chanceToTeleport: 90
   defaultChanceToTeleport: 90
 --- !u!114 &1795539283

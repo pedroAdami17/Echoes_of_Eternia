@@ -1,3 +1,6 @@
+using System.Diagnostics;
+using UnityEngine;
+
 public class DeathBringer_TeleportState : EnemyState
 {
     private Boss_DeathBringer enemy;
@@ -10,8 +13,9 @@ public class DeathBringer_TeleportState : EnemyState
     public override void Enter()
     {
         base.Enter();
-
+        UnityEngine.Debug.Log("Teleport state triggered");
         enemy.stats.MakeInvincible(true);
+        //enemy.FindPosition();
     }
 
     public override void Update()
